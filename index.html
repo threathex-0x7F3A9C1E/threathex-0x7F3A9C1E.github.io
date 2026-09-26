@@ -9,6 +9,9 @@
       href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Rajdhani:wght@400;500;600;700&family=Inter:wght@300;400;500&display=swap"
       rel="stylesheet"
     />
+    <!-- Export-to-image/PDF libraries (client-side only, no data leaves the device) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
   </head>
   <body class="dark">
     <div class="scanline-overlay"></div>
@@ -354,6 +357,11 @@
             <span class="ai-model-tag"
               >Bayesian Feature Classifier · 22 Signals · Instant</span
             >
+            <label class="explain-toggle" id="explainToggleWrap" title="Show every fired signal and its weight in the Bayesian score">
+              <input type="checkbox" id="explainToggle" />
+              <span class="explain-toggle-track"><span class="explain-toggle-thumb"></span></span>
+              <span class="explain-toggle-text">EXPLAIN AI</span>
+            </label>
             <span class="panel-badge" id="aiBadge">IDLE</span>
           </div>
         </div>
@@ -432,6 +440,13 @@
               <div class="compare-agreement" id="compareAgreement"></div>
             </div>
           </div>
+
+          <div class="ai-explain-panel" id="aiExplainPanel" style="display: none">
+            <div class="result-section-title">SIGNAL WEIGHT BREAKDOWN</div>
+            <p class="explain-subtitle" id="explainSubtitle"></p>
+            <div class="explain-signals-list" id="explainSignalsList"></div>
+            <div class="explain-math" id="explainMath"></div>
+          </div>
         </div>
 
         <div class="ai-error" id="aiError" style="display: none">
@@ -459,6 +474,63 @@
               AI analysis unavailable.
             </p>
           </div>
+        </div>
+      </div>
+
+      <div class="export-bar" id="exportBar" style="display: none">
+        <span class="export-bar-label">
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+            <path
+              d="M7 1v8m0 0l-2.5-2.5M7 9l2.5-2.5"
+              stroke="currentColor"
+              stroke-width="1.2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+            <path
+              d="M1.5 10v1.5a1 1 0 0 0 1 1h9a1 1 0 0 0 1-1V10"
+              stroke="currentColor"
+              stroke-width="1.2"
+              stroke-linecap="round"
+            />
+          </svg>
+          EXPORT REPORT
+        </span>
+        <div class="export-bar-actions">
+          <button class="btn-export" id="exportPngBtn" type="button">
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+              <rect
+                x="1.5"
+                y="2"
+                width="11"
+                height="10"
+                rx="1"
+                stroke="currentColor"
+                stroke-width="1.1"
+              />
+              <circle cx="4.5" cy="5" r="1" fill="currentColor" />
+              <path
+                d="M2 10l3-3 2 2 2.5-2.5L12.5 10"
+                stroke="currentColor"
+                stroke-width="1.1"
+                stroke-linejoin="round"
+                fill="none"
+              />
+            </svg>
+            <span class="btn-export-label">IMAGE (PNG)</span>
+          </button>
+          <button class="btn-export" id="exportPdfBtn" type="button">
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+              <path
+                d="M3 1.5h5l3 3v8a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1v-10a1 1 0 0 1 1-1z"
+                stroke="currentColor"
+                stroke-width="1.1"
+                stroke-linejoin="round"
+              />
+              <path d="M8 1.5v3h3" stroke="currentColor" stroke-width="1.1" stroke-linejoin="round" />
+            </svg>
+            <span class="btn-export-label">PDF REPORT</span>
+          </button>
         </div>
       </div>
 
@@ -1732,6 +1804,218 @@
         letter-spacing: 0.06em;
       }
 
+      /* ─── Explainable AI Toggle ──────────────────────────── */
+      .explain-toggle {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        cursor: pointer;
+        user-select: none;
+      }
+
+      .explain-toggle input {
+        position: absolute;
+        opacity: 0;
+        width: 0;
+        height: 0;
+      }
+
+      .explain-toggle-track {
+        position: relative;
+        width: 30px;
+        height: 16px;
+        border-radius: 999px;
+        background: var(--bg-input);
+        border: 1px solid var(--border);
+        transition: border-color var(--transition), background var(--transition);
+        flex-shrink: 0;
+      }
+
+      .explain-toggle-thumb {
+        position: absolute;
+        top: 1px;
+        left: 1px;
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        background: var(--text-muted);
+        transition: transform var(--transition), background var(--transition);
+      }
+
+      .explain-toggle input:checked + .explain-toggle-track {
+        border-color: #a78bfa;
+        background: rgba(167, 139, 250, 0.15);
+      }
+
+      .explain-toggle input:checked + .explain-toggle-track .explain-toggle-thumb {
+        transform: translateX(14px);
+        background: #a78bfa;
+      }
+
+      .explain-toggle-text {
+        font-family: var(--font-mono);
+        font-size: 10px;
+        letter-spacing: 0.1em;
+        color: var(--text-muted);
+        transition: color var(--transition);
+      }
+
+      .explain-toggle input:checked ~ .explain-toggle-text {
+        color: #a78bfa;
+      }
+
+      .ai-explain-panel {
+        margin-top: 16px;
+        padding-top: 16px;
+        border-top: 1px solid var(--border);
+      }
+
+      .explain-subtitle {
+        font-size: 12px;
+        color: var(--text-muted);
+        margin-bottom: 12px;
+        line-height: 1.6;
+      }
+
+      .explain-signals-list {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        margin-bottom: 14px;
+      }
+
+      .explain-signal-row {
+        background: var(--bg-panel-alt);
+        border: 1px solid var(--border);
+        border-radius: var(--radius);
+        padding: 10px 12px;
+      }
+
+      .explain-signal-label {
+        font-size: 12.5px;
+        color: var(--text-primary);
+        margin-bottom: 6px;
+        line-height: 1.5;
+      }
+
+      .explain-signal-bars {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+      }
+
+      .explain-bar-row {
+        display: grid;
+        grid-template-columns: 40px 1fr 46px;
+        align-items: center;
+        gap: 8px;
+      }
+
+      .explain-bar-tag {
+        font-family: var(--font-mono);
+        font-size: 9.5px;
+        letter-spacing: 0.06em;
+        color: var(--text-muted);
+      }
+
+      .explain-bar-track {
+        position: relative;
+        height: 6px;
+        border-radius: 999px;
+        background: var(--bg-input);
+        overflow: hidden;
+      }
+
+      .explain-bar-fill {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        border-radius: 999px;
+      }
+
+      .explain-bar-fill.scam {
+        background: var(--scam);
+      }
+
+      .explain-bar-fill.spam {
+        background: var(--spam);
+      }
+
+      .explain-bar-val {
+        font-family: var(--font-mono);
+        font-size: 10.5px;
+        color: var(--text-secondary);
+        text-align: right;
+      }
+
+      .explain-math {
+        font-family: var(--font-mono);
+        font-size: 11px;
+        color: var(--text-secondary);
+        background: var(--bg-input);
+        border: 1px solid var(--border);
+        border-radius: var(--radius);
+        padding: 12px 14px;
+        line-height: 1.9;
+        white-space: pre-wrap;
+      }
+
+      /* ─── Export Bar ──────────────────────────────────────── */
+      .export-bar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 12px;
+        background: var(--bg-panel);
+        border: 1px solid var(--border);
+        border-radius: var(--radius);
+        padding: 14px 20px;
+        margin-top: 20px;
+      }
+
+      .export-bar-label {
+        display: flex;
+        align-items: center;
+        gap: 7px;
+        font-family: var(--font-mono);
+        font-size: 11px;
+        letter-spacing: 0.12em;
+        color: var(--text-secondary);
+      }
+
+      .export-bar-actions {
+        display: flex;
+        gap: 10px;
+      }
+
+      .btn-export {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        background: transparent;
+        border: 1px solid var(--border);
+        border-radius: var(--radius);
+        color: var(--text-secondary);
+        font-family: var(--font-mono);
+        font-size: 11px;
+        letter-spacing: 0.08em;
+        padding: 8px 14px;
+        cursor: pointer;
+        transition: border-color var(--transition), color var(--transition);
+      }
+
+      .btn-export:hover:not(:disabled) {
+        border-color: var(--accent);
+        color: var(--accent);
+      }
+
+      .btn-export:disabled {
+        opacity: 0.5;
+        cursor: not-allowed;
+      }
+
       .compare-chip-val.safe {
         color: var(--safe);
       }
@@ -2551,7 +2835,23 @@
             "No immediate action needed. Stay cautious about sharing personal information with any sender you cannot independently verify.";
         }
 
-        return { verdict, confidence, reasoning, signals, recommended_action };
+        return {
+          verdict,
+          confidence,
+          reasoning,
+          signals,
+          recommended_action,
+          explain: {
+            firedFeatures: firedFeatures,
+            totalFeatureCount: ML_FEATURES.length,
+            probScam: probScam,
+            probSpam: probSpam,
+            probSafe: probSafe,
+            priorScam: Math.exp(LOG_PRIOR.scam),
+            priorSpam: Math.exp(LOG_PRIOR.spam),
+            priorSafe: Math.exp(LOG_PRIOR.safe),
+          },
+        };
       }
 
       /* ─── Highlight Suspicious Words ─────────────────── */
@@ -2764,6 +3064,115 @@
           agreeEl.className = "compare-agreement disagree";
           agreeEl.textContent = "⚠ ENGINES DIFFER";
         }
+
+        renderExplainPanel(aiData.explain);
+      }
+
+      /* ─── Explainable AI Panel ───────────────────────── */
+      function renderExplainPanel(explain) {
+        const subtitle = document.getElementById("explainSubtitle");
+        const list = document.getElementById("explainSignalsList");
+        const mathBox = document.getElementById("explainMath");
+        if (!explain) {
+          subtitle.textContent = "";
+          list.innerHTML = "";
+          mathBox.textContent = "";
+          return;
+        }
+
+        const fired = explain.firedFeatures || [];
+        subtitle.textContent =
+          fired.length +
+          " of " +
+          explain.totalFeatureCount +
+          " ML signals fired for this message. Each bar shows how strongly that " +
+          "signal pushed the Bayesian score toward SCAM or SPAM (longer = stronger weight).";
+
+        // Max weight magnitude across fired features, for proportional bars
+        let maxW = 0.001;
+        fired.forEach(function (f) {
+          maxW = Math.max(maxW, Math.abs(f.scam || 0), Math.abs(f.spam || 0));
+        });
+
+        list.innerHTML = "";
+        if (fired.length === 0) {
+          const empty = document.createElement("div");
+          empty.className = "explain-signal-row";
+          empty.textContent =
+            "No ML signals fired — the classifier relied entirely on its prior probabilities.";
+          list.appendChild(empty);
+        }
+
+        const sortedForExplain = [...fired].sort(function (a, b) {
+          return (
+            Math.abs(b.scam) +
+            Math.abs(b.spam) -
+            (Math.abs(a.scam) + Math.abs(a.spam))
+          );
+        });
+
+        sortedForExplain.forEach(function (f) {
+          const row = document.createElement("div");
+          row.className = "explain-signal-row";
+
+          const label = document.createElement("div");
+          label.className = "explain-signal-label";
+          label.textContent = f.label;
+          row.appendChild(label);
+
+          const bars = document.createElement("div");
+          bars.className = "explain-signal-bars";
+          bars.appendChild(buildExplainBar("SCAM", f.scam, maxW, "scam"));
+          bars.appendChild(buildExplainBar("SPAM", f.spam, maxW, "spam"));
+          row.appendChild(bars);
+
+          list.appendChild(row);
+        });
+
+        mathBox.textContent =
+          "PRIORS   scam=" +
+          explain.priorScam.toFixed(2) +
+          "  spam=" +
+          explain.priorSpam.toFixed(2) +
+          "  safe=" +
+          explain.priorSafe.toFixed(2) +
+          "\n" +
+          "  → each fired signal adds its weight (log-odds) to the matching class\n" +
+          "  → scores pass through softmax to become probabilities\n" +
+          "POSTERIOR  scam=" +
+          Math.round(explain.probScam * 100) +
+          "%  spam=" +
+          Math.round(explain.probSpam * 100) +
+          "%  safe=" +
+          Math.round(explain.probSafe * 100) +
+          "%";
+      }
+
+      function buildExplainBar(tagText, weight, maxW, kind) {
+        const w = weight || 0;
+        const pct = Math.max(2, Math.round((Math.abs(w) / maxW) * 100));
+        const wrap = document.createElement("div");
+        wrap.className = "explain-bar-row";
+
+        const tag = document.createElement("span");
+        tag.className = "explain-bar-tag";
+        tag.textContent = tagText;
+        wrap.appendChild(tag);
+
+        const track = document.createElement("div");
+        track.className = "explain-bar-track";
+        const fill = document.createElement("div");
+        fill.className = "explain-bar-fill " + kind;
+        fill.style.width = (w <= 0 ? 0 : pct) + "%";
+        track.appendChild(fill);
+        wrap.appendChild(track);
+
+        const val = document.createElement("span");
+        val.className = "explain-bar-val";
+        val.textContent = (w >= 0 ? "+" : "") + w.toFixed(2);
+        wrap.appendChild(val);
+
+        return wrap;
       }
 
       /* ─── Stats ──────────────────────────────────────── */
@@ -2776,6 +3185,149 @@
         document.getElementById("statScams").textContent = stats.scams;
         document.getElementById("statSpam").textContent = stats.spam;
         document.getElementById("statSafe").textContent = stats.safe;
+      }
+
+      /* ─── Export Report (PNG / PDF) ──────────────────── */
+      async function runExport(format, btnEl) {
+        if (typeof html2canvas === "undefined") {
+          alert(
+            "Export library failed to load (check your internet connection) — the export libraries are the one part of ThreatHex that load from a CDN.",
+          );
+          return;
+        }
+        const originalHTML = btnEl.innerHTML;
+        const labelEl = btnEl.querySelector(".btn-export-label");
+        const originalLabel = labelEl ? labelEl.textContent : "";
+        btnEl.disabled = true;
+        if (labelEl) labelEl.textContent = "EXPORTING...";
+
+        try {
+          const canvas = await buildReportCanvas();
+          const stamp = new Date().toISOString().replace(/[:.]/g, "-");
+          if (format === "png") {
+            downloadCanvasAsPNG(canvas, "threathex-report-" + stamp + ".png");
+          } else {
+            await downloadCanvasAsPDF(canvas, "threathex-report-" + stamp + ".pdf");
+          }
+        } catch (err) {
+          alert("Export failed: " + (err && err.message ? err.message : err));
+        } finally {
+          btnEl.disabled = false;
+          if (labelEl) labelEl.textContent = originalLabel;
+          else btnEl.innerHTML = originalHTML;
+        }
+      }
+
+      async function buildReportCanvas() {
+        const resultPanel = document.getElementById("resultPanel");
+        const aiPanel = document.getElementById("aiPanel");
+        const scale = Math.min(2, window.devicePixelRatio || 1.5);
+        const bgColor = getComputedStyle(document.body)
+          .getPropertyValue("--bg-base")
+          .trim();
+
+        const canvasOpts = { backgroundColor: bgColor, scale: scale, useCORS: true };
+        const [ruleCanvas, aiCanvas] = await Promise.all([
+          html2canvas(resultPanel, canvasOpts),
+          html2canvas(aiPanel, canvasOpts),
+        ]);
+
+        const padding = 24 * scale;
+        const headerH = 74 * scale;
+        const width =
+          Math.max(ruleCanvas.width, aiCanvas.width) + padding * 2;
+        const height =
+          headerH + ruleCanvas.height + aiCanvas.height + padding * 3;
+
+        const out = document.createElement("canvas");
+        out.width = width;
+        out.height = height;
+        const ctx = out.getContext("2d");
+
+        ctx.fillStyle = bgColor || "#0a0d14";
+        ctx.fillRect(0, 0, width, height);
+
+        const textColor = getComputedStyle(document.body)
+          .getPropertyValue("--text-primary")
+          .trim();
+        const mutedColor = getComputedStyle(document.body)
+          .getPropertyValue("--text-muted")
+          .trim();
+        const accentColor = getComputedStyle(document.body)
+          .getPropertyValue("--accent")
+          .trim();
+
+        ctx.fillStyle = accentColor || "#00e5ff";
+        ctx.font = "bold " + 22 * scale + "px sans-serif";
+        ctx.fillText("ThreatHex — Threat Report", padding, 30 * scale);
+
+        ctx.fillStyle = mutedColor || "#7a8ab8";
+        ctx.font = 12 * scale + "px monospace";
+        ctx.fillText(
+          "Generated " + new Date().toLocaleString() + " · Dual-Engine Detection · Frontend Only",
+          padding,
+          50 * scale,
+        );
+
+        let y = headerH + padding;
+        ctx.drawImage(ruleCanvas, padding, y);
+        y += ruleCanvas.height + padding;
+        ctx.drawImage(aiCanvas, padding, y);
+
+        return out;
+      }
+
+      function downloadCanvasAsPNG(canvas, filename) {
+        canvas.toBlob(function (blob) {
+          const url = URL.createObjectURL(blob);
+          const a = document.createElement("a");
+          a.href = url;
+          a.download = filename;
+          document.body.appendChild(a);
+          a.click();
+          a.remove();
+          setTimeout(function () {
+            URL.revokeObjectURL(url);
+          }, 2000);
+        }, "image/png");
+      }
+
+      async function downloadCanvasAsPDF(canvas, filename) {
+        const { jsPDF } = window.jspdf;
+        const imgData = canvas.toDataURL("image/png");
+
+        const pageW = 210; // A4 mm
+        const pageH = 297;
+        const marginMM = 8;
+        const usableW = pageW - marginMM * 2;
+        const usableH = pageH - marginMM * 2;
+
+        const imgWmm = usableW;
+        const imgHmm = (canvas.height / canvas.width) * imgWmm;
+
+        const pdf = new jsPDF({ unit: "mm", format: "a4" });
+        const pageCount = Math.max(1, Math.ceil(imgHmm / usableH));
+
+        // Height (in source px) that corresponds to one PDF page
+        const pagePx = (usableH / imgHmm) * canvas.height;
+
+        for (let p = 0; p < pageCount; p++) {
+          if (p > 0) pdf.addPage();
+          const sy = p * pagePx;
+          const sh = Math.min(pagePx, canvas.height - sy);
+
+          const slice = document.createElement("canvas");
+          slice.width = canvas.width;
+          slice.height = sh;
+          const sctx = slice.getContext("2d");
+          sctx.drawImage(canvas, 0, sy, canvas.width, sh, 0, 0, canvas.width, sh);
+
+          const sliceData = slice.toDataURL("image/png");
+          const sliceHmm = (sh / canvas.width) * imgWmm;
+          pdf.addImage(sliceData, "PNG", marginMM, marginMM, imgWmm, sliceHmm);
+        }
+
+        pdf.save(filename);
       }
 
       /* ─── Main Event Listeners ───────────────────────── */
@@ -2794,6 +3346,22 @@
         const aiLoading = document.getElementById("aiLoading");
         const aiResult = document.getElementById("aiResult");
         const aiError = document.getElementById("aiError");
+        const explainToggle = document.getElementById("explainToggle");
+        const aiExplainPanel = document.getElementById("aiExplainPanel");
+        const exportBar = document.getElementById("exportBar");
+        const exportPngBtn = document.getElementById("exportPngBtn");
+        const exportPdfBtn = document.getElementById("exportPdfBtn");
+
+        explainToggle.addEventListener("change", function () {
+          aiExplainPanel.style.display = explainToggle.checked ? "" : "none";
+        });
+
+        exportPngBtn.addEventListener("click", function () {
+          runExport("png", exportPngBtn);
+        });
+        exportPdfBtn.addEventListener("click", function () {
+          runExport("pdf", exportPdfBtn);
+        });
 
         messageInput.addEventListener("input", function () {
           const len = messageInput.value.length;
@@ -2874,6 +3442,8 @@
             document.getElementById("aiBadge").textContent = "ERROR";
           }
 
+          exportBar.style.display = "";
+
           detectBtn.classList.remove("scanning");
           detectBtn.querySelector(".btn-inner").innerHTML = ORIG_BTN;
           detectBtn.disabled = false;
@@ -2894,6 +3464,9 @@
           aiError.style.display = "none";
           document.getElementById("aiBadge").textContent = "IDLE";
           document.getElementById("aiBadge").style.cssText = "";
+          explainToggle.checked = false;
+          aiExplainPanel.style.display = "none";
+          exportBar.style.display = "none";
           messageInput.focus();
         });
 
