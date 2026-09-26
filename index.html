@@ -2583,16 +2583,22 @@
         },
         {
           id: "review_verify_link",
-          label: 'Call-to-action to "review" or "verify" via link',
+          label: 'Call-to-action to "verify" or "confirm" account/identity via link',
           test: function (t) {
+            // Requires the CTA verb to be tied to an account/identity/security
+            // noun — plain "click this link to register/learn more/etc." is
+            // completely normal and should NOT fire this.
             return (
-              /\b(review|verify|confirm|validate|check|click).{0,30}(here|now|link|below)\b/i.test(
+              /\b(verify|confirm|validate|re-?authenticate)\s+(your\s+)?(account|identity|password|login|billing|payment|subscription|details)\b/i.test(
                 t,
-              ) || /\b(review|verify)\s+here\b/i.test(t)
+              ) ||
+              /\b(click|tap)\s+(here|below)\s+(now|immediately)?\s*to\s+(verify|confirm|unlock|restore|avoid\s+suspension)\b/i.test(
+                t,
+              )
             );
           },
-          scam: 3.0,
-          spam: 1.5,
+          scam: 2.0,
+          spam: 1.0,
         },
         {
           id: "impersonates_support",
@@ -2659,8 +2665,11 @@
               /https?:\/\/[^\s]+/i.test(t) && /\+?[\d][\d\s\-().]{6,}/.test(t)
             );
           },
-          scam: 3.0,
-          spam: 1.0,
+          // Weak signal on its own — plenty of legitimate messages (schools,
+          // clinics, deliveries) include both a link and a phone number.
+          // Only meaningful alongside other stronger signals.
+          scam: 1.2,
+          spam: 0.5,
         },
         {
           id: "mixed_case_domain",
@@ -2686,22 +2695,35 @@
         safe: Math.log(0.6),
       };
 
+      /* Temperature dampens how hard fired-feature weights swing the score.
+   Feature weights (2.0–4.5) are individually much larger than the gaps
+   between the priors (~0.9–1.4), so without this a single ambiguous
+   signal was enough to blow past 95% confidence. Dividing the summed
+   feature evidence by TEMPERATURE means it now takes several
+   corroborating signals — not just one or two generic ones — to reach
+   high confidence, while genuinely strong/multi-signal phishing still
+   scores just as high as before. */
+      const TEMPERATURE = 2.2;
+
       function mlClassify(text, phone) {
         const input = text + (phone && phone.trim() ? " " + phone.trim() : "");
         const firedFeatures = [];
-        let logScam = LOG_PRIOR.scam;
-        let logSpam = LOG_PRIOR.spam;
-        let logSafe = LOG_PRIOR.safe;
+        let sumScam = 0;
+        let sumSpam = 0;
 
         for (const f of ML_FEATURES) {
           if (f.test(input)) {
             firedFeatures.push(f);
-            logScam += f.scam;
-            logSpam += f.spam;
-            // Safe gets a penalty proportional to severity
-            logSafe -= f.scam * 0.4 + f.spam * 0.2;
+            sumScam += f.scam;
+            sumSpam += f.spam;
           }
         }
+
+        let logScam = LOG_PRIOR.scam + sumScam / TEMPERATURE;
+        let logSpam = LOG_PRIOR.spam + sumSpam / TEMPERATURE;
+        // Safe gets a penalty proportional to severity, same damping applied
+        let logSafe =
+          LOG_PRIOR.safe - (sumScam * 0.4 + sumSpam * 0.2) / TEMPERATURE;
 
         // Softmax over log-scores → probabilities
         const scores = { scam: logScam, spam: logSpam, safe: logSafe };
