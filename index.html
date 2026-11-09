@@ -55,8 +55,10 @@
           detection with a
           <strong>purpose-built cybersecurity ML engine</strong> — a Bayesian
           feature classifier with 22 domain-specific signals — for deep-context
-          threat analysis. Fully private, instant, no data ever leaves your
-          device.
+          threat analysis. A built-in
+          <strong>URL homograph checker</strong> uses the full Unicode
+          confusables table to expose IDN look-alike attacks. Fully private,
+          instant, no data ever leaves your device.
         </p>
       </section>
 
@@ -71,31 +73,9 @@
           <div class="field-group">
             <label class="field-label" for="messageInput">
               <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
-                <rect
-                  x="1"
-                  y="2"
-                  width="12"
-                  height="10"
-                  rx="1"
-                  stroke="currentColor"
-                  stroke-width="1.2"
-                />
-                <line
-                  x1="4"
-                  y1="5"
-                  x2="10"
-                  y2="5"
-                  stroke="currentColor"
-                  stroke-width="1.2"
-                />
-                <line
-                  x1="4"
-                  y1="8"
-                  x2="8"
-                  y2="8"
-                  stroke="currentColor"
-                  stroke-width="1.2"
-                />
+                <rect x="1" y="2" width="12" height="10" rx="1" stroke="currentColor" stroke-width="1.2" />
+                <line x1="4" y1="5" x2="10" y2="5" stroke="currentColor" stroke-width="1.2" />
+                <line x1="4" y1="8" x2="8" y2="8" stroke="currentColor" stroke-width="1.2" />
               </svg>
               Suspicious Message
             </label>
@@ -113,15 +93,7 @@
           <div class="field-group">
             <label class="field-label" for="phoneInput">
               <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
-                <rect
-                  x="3"
-                  y="1"
-                  width="8"
-                  height="12"
-                  rx="1.5"
-                  stroke="currentColor"
-                  stroke-width="1.2"
-                />
+                <rect x="3" y="1" width="8" height="12" rx="1.5" stroke="currentColor" stroke-width="1.2" />
                 <circle cx="7" cy="10.5" r="0.75" fill="currentColor" />
               </svg>
               Phone Number <span class="optional">(optional)</span>
@@ -138,22 +110,8 @@
             <button class="btn-detect" id="detectBtn">
               <span class="btn-inner">
                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-                  <circle
-                    cx="8"
-                    cy="8"
-                    r="6"
-                    stroke="currentColor"
-                    stroke-width="1.5"
-                  />
-                  <line
-                    x1="8"
-                    y1="5"
-                    x2="8"
-                    y2="8"
-                    stroke="currentColor"
-                    stroke-width="1.5"
-                    stroke-linecap="round"
-                  />
+                  <circle cx="8" cy="8" r="6" stroke="currentColor" stroke-width="1.5" />
+                  <line x1="8" y1="5" x2="8" y2="8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
                   <circle cx="8" cy="10.5" r="0.75" fill="currentColor" />
                 </svg>
                 RUN THREAT SCAN
@@ -162,19 +120,8 @@
             </button>
             <button class="btn-reset" id="resetBtn">
               <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
-                <path
-                  d="M2 7a5 5 0 1 1 1.5 3.5"
-                  stroke="currentColor"
-                  stroke-width="1.3"
-                  stroke-linecap="round"
-                />
-                <polyline
-                  points="2,4 2,7 5,7"
-                  stroke="currentColor"
-                  stroke-width="1.3"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
+                <path d="M2 7a5 5 0 1 1 1.5 3.5" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" />
+                <polyline points="2,4 2,7 5,7" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" />
               </svg>
               RESET
             </button>
@@ -185,42 +132,10 @@
         <div class="panel result-panel" id="resultPanel">
           <div class="panel-header">
             <span class="panel-label">
-              <svg
-                width="12"
-                height="12"
-                viewBox="0 0 12 12"
-                fill="none"
-                style="
-                  display: inline;
-                  vertical-align: middle;
-                  margin-right: 4px;
-                "
-              >
-                <rect
-                  x="1"
-                  y="1"
-                  width="10"
-                  height="10"
-                  rx="1"
-                  stroke="currentColor"
-                  stroke-width="1.2"
-                />
-                <line
-                  x1="3"
-                  y1="4"
-                  x2="9"
-                  y2="4"
-                  stroke="currentColor"
-                  stroke-width="1"
-                />
-                <line
-                  x1="3"
-                  y1="6.5"
-                  x2="7"
-                  y2="6.5"
-                  stroke="currentColor"
-                  stroke-width="1"
-                />
+              <svg width="12" height="12" viewBox="0 0 12 12" fill="none" style="display: inline; vertical-align: middle; margin-right: 4px;">
+                <rect x="1" y="1" width="10" height="10" rx="1" stroke="currentColor" stroke-width="1.2" />
+                <line x1="3" y1="4" x2="9" y2="4" stroke="currentColor" stroke-width="1" />
+                <line x1="3" y1="6.5" x2="7" y2="6.5" stroke="currentColor" stroke-width="1" />
               </svg>
               RULE ENGINE
             </span>
@@ -230,36 +145,10 @@
           <div class="idle-state" id="idleState">
             <div class="idle-icon">
               <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
-                <polygon
-                  points="24,4 44,14 44,34 24,44 4,34 4,14"
-                  stroke="currentColor"
-                  stroke-width="1.5"
-                  fill="none"
-                  opacity="0.3"
-                />
-                <polygon
-                  points="24,10 38,17 38,31 24,38 10,31 10,17"
-                  stroke="currentColor"
-                  stroke-width="1"
-                  fill="none"
-                  opacity="0.2"
-                />
-                <circle
-                  cx="24"
-                  cy="24"
-                  r="6"
-                  stroke="currentColor"
-                  stroke-width="1.5"
-                  fill="none"
-                  opacity="0.5"
-                />
-                <circle
-                  cx="24"
-                  cy="24"
-                  r="2"
-                  fill="currentColor"
-                  opacity="0.4"
-                />
+                <polygon points="24,4 44,14 44,34 24,44 4,34 4,14" stroke="currentColor" stroke-width="1.5" fill="none" opacity="0.3" />
+                <polygon points="24,10 38,17 38,31 24,38 10,31 10,17" stroke="currentColor" stroke-width="1" fill="none" opacity="0.2" />
+                <circle cx="24" cy="24" r="6" stroke="currentColor" stroke-width="1.5" fill="none" opacity="0.5" />
+                <circle cx="24" cy="24" r="2" fill="currentColor" opacity="0.4" />
               </svg>
             </div>
             <p class="idle-text">
@@ -308,47 +197,50 @@
         </div>
       </div>
 
+      <!-- URL HOMOGRAPH / IDN ATTACK PANEL -->
+      <div class="panel url-panel" id="urlPanel">
+        <div class="panel-header">
+          <span class="panel-label">URL HOMOGRAPH / IDN ATTACK CHECK</span>
+          <div class="ai-panel-badges">
+            <span class="ai-model-tag" id="urlTableTag">Unicode Confusables · loading…</span>
+            <span class="panel-badge" id="urlBadge">IDLE</span>
+          </div>
+        </div>
+        <div class="field-group">
+          <label class="field-label" for="urlInput">
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+              <circle cx="7" cy="7" r="5.5" stroke="currentColor" stroke-width="1.2" />
+              <path d="M1.5 7h11M7 1.5c-2 2-2 9 0 11M7 1.5c2 2 2 9 0 11" stroke="currentColor" stroke-width="1" />
+            </svg>
+            Suspicious URL
+          </label>
+          <div class="url-row">
+            <input
+              type="text"
+              id="urlInput"
+              class="phone-input"
+              spellcheck="false"
+              placeholder="e.g. https://аррӏе.com/login (Cyrillic look-alikes) or xn--80ak6aa92e.com"
+            />
+            <button class="btn-detect" id="urlCheckBtn" style="flex: 0 0 auto">
+              <span class="btn-inner">CHECK URL</span><span class="btn-glow"></span>
+            </button>
+          </div>
+        </div>
+        <div id="urlResult" style="display: none"></div>
+      </div>
+
       <!-- AI ANALYSIS PANEL (full width) -->
       <div class="panel ai-panel" id="aiPanel">
         <div class="panel-header">
           <span class="panel-label">
             <span class="ai-brain-icon">
-              <svg
-                width="14"
-                height="14"
-                viewBox="0 0 14 14"
-                fill="none"
-                style="
-                  display: inline;
-                  vertical-align: middle;
-                  margin-right: 5px;
-                "
-              >
-                <ellipse
-                  cx="7"
-                  cy="7"
-                  rx="5"
-                  ry="4"
-                  stroke="currentColor"
-                  stroke-width="1.2"
-                />
-                <path
-                  d="M4 5c0-1 1-2 3-2s3 1 3 2"
-                  stroke="currentColor"
-                  stroke-width="1"
-                  stroke-linecap="round"
-                />
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none" style="display: inline; vertical-align: middle; margin-right: 5px;">
+                <ellipse cx="7" cy="7" rx="5" ry="4" stroke="currentColor" stroke-width="1.2" />
+                <path d="M4 5c0-1 1-2 3-2s3 1 3 2" stroke="currentColor" stroke-width="1" stroke-linecap="round" />
                 <circle cx="5" cy="7.5" r="0.8" fill="currentColor" />
                 <circle cx="9" cy="7.5" r="0.8" fill="currentColor" />
-                <line
-                  x1="7"
-                  y1="10"
-                  x2="7"
-                  y2="11.5"
-                  stroke="currentColor"
-                  stroke-width="1.2"
-                  stroke-linecap="round"
-                />
+                <line x1="7" y1="10" x2="7" y2="11.5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" />
               </svg>
             </span>
             AI MODEL ANALYSIS · Cybersec ML Engine
@@ -386,9 +278,7 @@
             <div class="ai-loading-fill"></div>
           </div>
           <div class="ai-loading-steps" id="aiLoadingSteps">
-            <span class="ai-step active" id="step1"
-              >Extracting features...</span
-            >
+            <span class="ai-step active" id="step1">Extracting features...</span>
             <span class="ai-step" id="step2">Running Bayesian scorer...</span>
             <span class="ai-step" id="step3">Checking URL structure...</span>
             <span class="ai-step" id="step4">Computing posteriors...</span>
@@ -452,27 +342,11 @@
         <div class="ai-error" id="aiError" style="display: none">
           <div class="ai-error-inner">
             <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
-              <circle
-                cx="9"
-                cy="9"
-                r="7"
-                stroke="var(--scam)"
-                stroke-width="1.3"
-              />
-              <line
-                x1="9"
-                y1="5.5"
-                x2="9"
-                y2="9.5"
-                stroke="var(--scam)"
-                stroke-width="1.5"
-                stroke-linecap="round"
-              />
+              <circle cx="9" cy="9" r="7" stroke="var(--scam)" stroke-width="1.3" />
+              <line x1="9" y1="5.5" x2="9" y2="9.5" stroke="var(--scam)" stroke-width="1.5" stroke-linecap="round" />
               <circle cx="9" cy="12" r="0.8" fill="var(--scam)" />
             </svg>
-            <p class="ai-error-text" id="aiErrorText">
-              AI analysis unavailable.
-            </p>
+            <p class="ai-error-text" id="aiErrorText">AI analysis unavailable.</p>
           </div>
         </div>
       </div>
@@ -480,53 +354,23 @@
       <div class="export-bar" id="exportBar" style="display: none">
         <span class="export-bar-label">
           <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
-            <path
-              d="M7 1v8m0 0l-2.5-2.5M7 9l2.5-2.5"
-              stroke="currentColor"
-              stroke-width="1.2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            />
-            <path
-              d="M1.5 10v1.5a1 1 0 0 0 1 1h9a1 1 0 0 0 1-1V10"
-              stroke="currentColor"
-              stroke-width="1.2"
-              stroke-linecap="round"
-            />
+            <path d="M7 1v8m0 0l-2.5-2.5M7 9l2.5-2.5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M1.5 10v1.5a1 1 0 0 0 1 1h9a1 1 0 0 0 1-1V10" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" />
           </svg>
           EXPORT REPORT
         </span>
         <div class="export-bar-actions">
           <button class="btn-export" id="exportPngBtn" type="button">
             <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
-              <rect
-                x="1.5"
-                y="2"
-                width="11"
-                height="10"
-                rx="1"
-                stroke="currentColor"
-                stroke-width="1.1"
-              />
+              <rect x="1.5" y="2" width="11" height="10" rx="1" stroke="currentColor" stroke-width="1.1" />
               <circle cx="4.5" cy="5" r="1" fill="currentColor" />
-              <path
-                d="M2 10l3-3 2 2 2.5-2.5L12.5 10"
-                stroke="currentColor"
-                stroke-width="1.1"
-                stroke-linejoin="round"
-                fill="none"
-              />
+              <path d="M2 10l3-3 2 2 2.5-2.5L12.5 10" stroke="currentColor" stroke-width="1.1" stroke-linejoin="round" fill="none" />
             </svg>
             <span class="btn-export-label">IMAGE (PNG)</span>
           </button>
           <button class="btn-export" id="exportPdfBtn" type="button">
             <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
-              <path
-                d="M3 1.5h5l3 3v8a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1v-10a1 1 0 0 1 1-1z"
-                stroke="currentColor"
-                stroke-width="1.1"
-                stroke-linejoin="round"
-              />
+              <path d="M3 1.5h5l3 3v8a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1v-10a1 1 0 0 1 1-1z" stroke="currentColor" stroke-width="1.1" stroke-linejoin="round" />
               <path d="M8 1.5v3h3" stroke="currentColor" stroke-width="1.1" stroke-linejoin="round" />
             </svg>
             <span class="btn-export-label">PDF REPORT</span>
@@ -1446,6 +1290,68 @@
         background: var(--text-muted);
       }
 
+      /* ─── URL Homograph Panel ────────────────────────────── */
+      .url-panel {
+        margin-bottom: 24px;
+        animation: fade-up 0.6s 0.12s ease both;
+      }
+
+      .url-panel::before {
+        background: linear-gradient(90deg, #ff3d3d, var(--accent), transparent);
+      }
+
+      .url-row {
+        display: flex;
+        gap: 10px;
+      }
+
+      .url-row .phone-input {
+        flex: 1;
+        font-family: var(--font-mono);
+      }
+
+      .homo-line {
+        font-family: var(--font-mono);
+        font-size: 13px;
+        padding: 8px 12px;
+        background: var(--bg-input);
+        border: 1px solid var(--border);
+        border-radius: var(--radius);
+        margin-bottom: 8px;
+        word-break: break-all;
+        color: var(--text-primary);
+      }
+
+      .homo-line small {
+        display: block;
+        font-size: 10px;
+        letter-spacing: 0.12em;
+        color: var(--text-muted);
+        margin-bottom: 2px;
+      }
+
+      .homo-table-wrap {
+        overflow-x: auto;
+        max-height: 260px;
+        overflow-y: auto;
+      }
+
+      .homo-table {
+        width: 100%;
+        border-collapse: collapse;
+        font-family: var(--font-mono);
+        font-size: 12px;
+        margin-top: 6px;
+      }
+
+      .homo-table th,
+      .homo-table td {
+        text-align: left;
+        padding: 6px 8px;
+        border-bottom: 1px solid var(--border);
+        color: var(--text-secondary);
+      }
+
       /* ─── AI Panel ───────────────────────────────────────── */
       .ai-panel {
         margin-bottom: 24px;
@@ -2076,6 +1982,14 @@
         .ai-verdict-card {
           grid-row: auto;
         }
+        .url-row {
+          flex-direction: column;
+        }
+        .url-panel .panel-header {
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 8px;
+        }
       }
 
       .header-inner {
@@ -2131,8 +2045,8 @@
     </style>
     <script>
       /* ═══════════════════════════════════════════════════════
-   ThreatHex — Dual Engine Detection
-   Rule-based + Claude AI via Anthropic API
+   ThreatHex — Dual Engine Detection + URL Homograph Check
+   100% in-browser. No API, no data sent anywhere.
 ═══════════════════════════════════════════════════════ */
 
       /* ─── Session Statistics ──────────────────────────── */
@@ -3507,6 +3421,417 @@
 
         messageInput.focus();
       });
+
+      /* ═══════════════════════════════════════════════════════
+   URL HOMOGRAPH / IDN ATTACK CHECK
+   Uses the complete Unicode confusables table (UTS #39, 6,565
+   mappings, embedded below) — common AND rare look-alikes.
+═══════════════════════════════════════════════════════ */
+      (function () {
+        /* Compact table: "<src base36>><tgt base36>[.<tgt base36>...]" joined by "," */
+        const CONFUSABLES_RAW = "y>13.13,11>56.1b.6f4,1c>27,1d>30,21>30,2o>13,31>36.32,3g>30,4g>w,4i>2r.mw,4l>2h.mt,4v>jt,50>13,51>qk,54>18,5i>1t.1x,5j>1v.me,5s>1w.mt,5z>3c,60>27.mw,6e>2p.2t,6f>2r.me,6o>6pu.mt,6u>17t,6w>33.mw,72>34,7k>1w.mt,7l>2s.mt,7u>7o,7v>7p,86>20.mt,87>2w.mt,8h>2x,8i>30.22,8j>2x.2y,8v>30.53,8w>30.53,8x>24.mw,8y>30.mw,92>he,95>13.32,97>32.mh,9c>5y,9e>27.1x,9f>33.2t,9v>bv,9y>2c.mt,9z>38.mt,an>2u,ao>2q.mt,ap>13.1u,aq>2q.lg,ar>2q.lg,as>2q,av>1v.13,ax>1w.mt,ay>13.1w,b0>2s.lg,b1>2v,b5>1y.me,b6>2u,b7>1z.13,ba>30,bb>30.mt,bc>23.13,bd>2z.lw,be>30.mt,bf>qj.mw,bh>26.me,bi>32.mh,bj>27.mt,bk>27.13,bl>33.13,bo>13.28,bp>34.lw,bq>2a,br>1e,bw>13.2c,bx>38.lw,by>2c.mg,c3>13.2h,c4>3d.lw,c5>2i.mt,c6>3e.mt,c7>1f,cb>1e.mt,cc>1h,cd>37,cf>34,cg>30,ch>30.30,cj>x,ck>1w.al,cl>1w.am,cm>2s.am,cn>24.22,co>24.2y,cp>30.2y,cq>26.22,cr>26.2y,cs>32.2y,ct>76,cu>77,cv>8c,cw>8d,cx>9a,cy>9b,cz>a4,d0>a5,dg>1z.mt,dh>2v.mt,di>7y,dj>7z,dt>1w.2i,du>1w.3e,dv>2s.3e,dx>83,e6>27.mw.ld,ey>9u,ez>bv,f0>1f,f6>1k,f7>1k,f8>2i.me,f9>3e.me,fa>5h,fb>6d,fw>2r.mw,fy>2c.mw,g1>1r,g4>2d.mt,g6>1x.mw,g7>2t.mw,g8>22.mt,g9>2y.mt,gd>36.mt,ge>2h.mt,gf>3d.mt,gh>2p,gj>2q.lw,gm>2s.mg,gn>2s.lw,gp>d9,gq>d9.ke,gr>x3n,gw>2v.lw,gx>2v,gz>3d,h2>2w.lw,h4>2x.mt,h5>2x,h6>2x,h7>30.ms,h9>30.mg,ha>30.f1,hb>3b,hd>36.32.me,hf>32.mg,hh>33.mt,hi>33.5qf,ho>36.mh,hp>36.mg,hu>37.mg,i3>39,i7>3d,i8>3e.mg,ia>f1,ic>1r,id>x5a,io>35.lw,ir>2s.3e,is>2s.f1,it>2s.i9,iu>38.37,iv>38.hv,iw>38.gl,ix>2u.32.mh,iy>30.37,iz>30.3e,j7>4xg,jd>13,je>13.13,jf>13,jg>13,jh>13,ji>13,jj>121,jm>1o,jn>1q,jo>2m,jq>2m,js>13,ju>13,jv>13,k0>1m,k3>121,k7>19,k8>jr,k9>1v5,ka>4w,kb>2x,kc>3i,kd>13.13,kh>4xf,ki>4xh,kk>jl,ku>13.13,l0>13,l2>13.13,l4>1m,l7>kq,lh>lg,lo>li,lp>19s,ls>li.lj,lt>le,lx>lv,lz>18w,m2>5bd,m8>mp,m9>me,ma>mg,mf>me,mu>mt,mv>mw,mx>me,n4>lc,n5>ld,n6>lf,n7>lv,n9>mg,nb>mr,nc>1hiy,nr>nk,ns>lj,o6>lm,oe>li,og>8s5,ok>13,ol>jz,om>t4,on>5qm,oq>2x,or>gk,ot>x1b,ou>1n,ov>22,p0>13,p3>53,pd>1t,pe>1u,ph>1x,pi>2i,pj>20,pk>27.mt,pl>30,pm>23,pn>g5,po>25,pp>26,pr>27,pt>28,pv>bt,pw>2c,px>2h,pz>2g,q9>2p,qa>67,qb>3d,qc>61r,qd>x3n,qf>32.mh,qg>27.mt,qh>2x,qi>8o,ql>3a,qn>33,qp>34,qr>33,qs>5qz,qt>39,qu>hk,r4>67,r5>27.mt,r6>2h,r9>hk,ra>qo,rf>qq,rg>1y,ro>tj,rp>uf,rs>1e,rt>bs,rw>1i,rx>33,s0>8o,s1>34,s2>2r,s3>2y,s4>27.mt,s5>x3n,s7>66,s8>34,s9>1v,sa>25,sd>au,sf>x1a,sk>x3m,sl>2b,sm>30,so>22,sw>1t,sx>2q.lg,sy>1u,sz>pf,t1>1x,t3>1f,t5>st,t6>23,t7>g5,t8>25,t9>20,ta>27,tb>ps,tc>28,td>1v,te>2c,tf>2h,tg>py,th>2g,tn>2q.30,to>2q,tq>30.27,ts>2p,tt>1i,tu>ih,tv>36,tx>2t,tz>gs,u0>5qm,u2>8o,u4>i5,u5>ik,u6>33,u7>qo,u8>34,u9>2r,ua>5qz,ub>3d,uc>hk,ud>3c,ug>3b,ui>jt.2q,uj>at.2x,uk>at,un>5qx,us>x3n,ut>37,uu>2x,uw>2y,uz>2w.mt,v1>u1,v3>39.mh,v5>3b,v6>2q.mt,v7>2q.mt,vk>q0,vl>qw,vm>27.mt,vn>33.mt,vo>2e,vp>3a,vw>v4.w6.w7,vx>3b.w6.w7,wa>st.me,wb>u1.me,wc>2q.mt,wd>2q.mt,wg>pf.13,wh>36.13,wi>pf.mt,wj>36.mt,wm>t2.mh,wn>ty.mh,wo>1f.me,wp>gs.me,wq>23.mh,wr>8o.mh,wu>23.mt,wv>8o.mt,wy>20.mh,wz>ik.mh,x6>1v.me,x7>2r.me,x8>2c.mh,x9>5qz.mh,xa>2h,xb>3d,xc>2h.mt,xd>3d.mt,xe>2g.mh,xn>2w,xp>2t,xq>xo.mg,xr>2t.mg,xs>30,xx>g5.me,xy>u3.me,xz>20.me,y0>ik.me,y1>20.me,y2>ik.me,y3>xi,y4>xj,y5>25.me,y6>i5.me,y7>30,yc>1t.1x,yd>2p.2t,yg>b3,yh>d9,yo>1f,yp>f1,yw>27.mt,yx>33.mt,zl>2s,zu>dy,zw>1z,zx>gy,100>b4,101>x3n,10b>35,10c>2f,10d>3b,117>3ou,11g>3k6,11m>3s3,11o>3mp,11p>2d,11r>2b,11v>py,11x>27,122>13,125>13,129>3b,12b>35,12e>35,12m>61r,12o>2w,12q>32.mh,12t>fr,12w>32,12y>hc,130>32,131>39,135>2v,136>2x,138>2u,139>33,13b>12d.2x,13d>1m,13w>ld,13x>ld,144>13u,148>13t,14d>13q,14e>13s,14f>lm,14k>mb,14p>lj,14q>lj,14w>30,14x>lj,14y>lj,14z>1m,150>lj,151>mb,15h>30,15k>3a,15l>13,15r>30,15t>33,168>30.30,169>30.13,16a>13.13,16b>13,16c>13.13,16x>56.1b.6f4.6f4,16y>56.1b.6f4.6f4.6f4,171>18,173>189,17c>ld,17d>lv,17e>18w,17n>30.19w,17o>18o.19w,17p>30.191,17q>18p.19w,17r>30,17v>18p.1cr,184>183.1cr,18d>18p.le,18f>18p.1cr,18n>33,18q>18p,18r>ln,18u>ld,18v>lv,18y>lm,18z>lf,192>mh,193>lu,194>li,195>lg,196>li,197>le,198>mb,199>lw,19b>191,19c>1a,19d>30,19h>33,19j>2e,19k>g5,19m>56.1b.6f4,19n>18,19o>170,19p>16,19q>18p,19r>1b5,19u>30.19w,19v>30.191,19x>30.19w,19y>18o.19w,19z>18o.lv.19w,1a0>18p.19w,1a1>18p.179,1a2>17u,1a6>18p.1cr,1a9>17x.190,1ad>17x.1cr,1ag>17z.179,1aj>1ai.179,1am>17z.1cr,1an>17z.1cr,1ap>181.179,1aq>181.li,1aw>181.1cr,1b2>185.1cr,1b3>187.1cr,1b8>1b5.1cr,1bb>18h,1bc>1b5.1cr,1bd>18j,1be>18j,1bh>18j.1cr,1bo>1bj.1cr,1bp>18k.li,1br>18k.1cr,1bu>18p,1bv>18p.179,1bx>18p.1cr,1by>33,1c1>33,1c2>1c0,1c3>17t,1c6>18o.li,1c7>18o.lv,1c8>18o.19s,1c9>18o.le,1cb>18o.1cr,1cc>18p,1ce>18p.li,1cg>1a3,1ch>18p.1cr,1ci>18p,1ck>19,1cl>33,1cv>lm,1d4>li.lj,1d8>lj,1da>17z.le,1db>181.le,1dc>1a,1dd>30,1de>19e,1df>19f,1dg>19g,1dh>33,1di>19i,1dj>2e,1dk>g5,1dl>19l,1dp>17l.1hiy,1dq>18l.1hiy,1dr>33.le,1dt>1a,1du>1a,1dv>1m,1dw>1m,1fk>lj,1fl>lj,1fm>1fg,1fr>ld,1g1>17s.1cr,1g2>18p.1cr,1g6>18p.li,1gi>1bg,1gj>18j.1cr,1gn>1g4,1go>18m.179,1gp>18m.li,1gs>181.190,1gx>1av.179,1gy>17x.190,1ha>183.le,1j4>27,1je>30,1kb>lg,1kd>lj,1ke>le,1kj>lk,1kk>13,1kl>13,1kq>2n,1ov>18p.lm,1pd>17s.190,1pg>1b6.1cr,1pj>18l.1cr,1pk>18p.190,1pl>1g4,1pq>17z.mc.mb,1pr>185.mc.mb,1ps>1bj,1pt>18o,1pu>182.le,1py>17s.1cy,1pz>18p.1cr.1cy,1q1>181.li.lj,1q2>18p.li.lj,1q3>1b5,1q4>1b5,1q5>18p,1q6>18p.1cr.li,1q7>17u.li,1q8>18p.179.li,1q9>1ae.li,1qa>18j.li,1r9>18s,1rc>18s,1re>lj,1rf>lk,1rh>mb,1ri>mc,1rk>ln,1rl>18s,1rm>18t,1rn>lv,1rs>nk,1rt>no,1ru>np,1rz>nk,1s0>nm,1s1>li.lj,1s2>lj,1s3>1m,1s4>1s5.1ty,1s6>1s5.1tq,1s8>1tc.1u5.1s7,1sd>1sf.li,1se>1sf.1ty,1sg>1sf.1jz8,1sh>1s5.1tq.li,1si>1s5.1tq.1ty,1sj>1s5.1tq.1jz8,1sk>1s5.1tq.1u0,1tn>1tq.1tm,1to>mb,1tr>1xb,1tx>li,1tz>1jz8,1u1>1tq.li,1ua>mp,1ub>lc,1uc>ld,1ue>1jz6,1uf>1jz7,1ut>1us.1us,1uu>33,1uv>19l,1ux>1f,1v6>1s5.li,1v7>1s5.1tm,1v8>1s5.1tq.1tm,1v9>1s5.1u7,1vh>1r,1vl>li.lj,1vq>1vp.1xa,1x8>mb,1y8>1vv.1xf,1y9>1vv.1xf,1ye>33,1yi>1k,1yl>1l,1yo>1ww,1z6>lj,1z7>1vn,1za>1z9.20u,1zb>1t6.1u5.1sv.1xb,1zc>1t6.1u5.1sv.20w,1zd>22b.1jz6,1ze>22b.1jz7,1zj>1t6.1u5.1sv.1jz8,1zk>1z9.1u0,1zo>1z9.218,1zp>1th,1zw>1t0.1u5.1t0,1zz>1sv,200>1sw,204>1s9,207>1t6,20b>1sy,20e>1t9,20l>1tl,20o>1ta,20s>mb,20v>1xb,20x>1jz6,20y>1jz7,213>1jz8,214>1u0,217>1ty,219>1u5,21y>33,21z>1l,222>1k,22a>1t6.1u5.1sv,22p>li.lj,22q>lj,22r>1m,22u>22t.24e,231>22t.24l,233>22t.24n,234>22t.24o,235>22t.24e.24l,237>22t.24e.24n,238>22t.24e.24o,23u>uf,240>1uw,24c>mb,24d>1tp,24h>1tt,24i>1tu,24t>1u5,25i>33,25k>1uw,25l>1f,25m>1uy,25n>uf,25q>1v2,25s>1v4,269>li.lj,26b>1k,26e>26d.27y,274>27,27w>mb,292>33,294>1l,29u>lm,2a2>2a1.2b7,2ac>2aa.2b7,2ak>2a8,2b4>2a0,2bc>2ba,2bi>2a0,2bs>2ax,2bu>2bq.2a0,2bv>2br.2a0,2bw>2bq.2b7,2bx>lj,2c7>2b7,2cm>33,2cn>2ad,2co>2a1,2cq>2ai,2cr>2a0.2bl,2cs>2ai.2bl,2ct>2a6,2cu>29x,2cw>2b3,2cy>2ai.2bm,2d0>2b2.2bk,2d1>2cz,2d3>2a6.2b9,2d4>2bb,2d6>2aw.2bk,2dc>li.lj,2de>33,2df>1vn,2dv>2du.2fp,2dw>2du.2fg,2dy>2hi.mb,2e8>2eo.14s,2ea>2e9.mb,2ed>2ef.14s,2el>2ek.mb,2em>2et.2f5,2ev>2et.mb,2ex>2et.2f2,2f6>2f5.2f2,2f8>2f7.2f2,2g0>2dn.2f2,2g1>2do.2f2,2g6>33,2gx>li.lj,2gy>33,2gz>1vn,2h1>2dh,2h2>2di,2h3>2dj,2hc>2ds,2he>2du,2hf>2du.2fp,2hg>2du.2fg,2hj>2dz,2ho>2e4,2hp>2e5,2hq>2e6,2hr>2e7,2hv>2eb,2hy>2ee,2i0>2eg,2i7>2en,2i8>2eo,2i9>2ep,2ia>2eq,2ib>2er,2in>2f3,2ip>2f5,2ir>2f7,2jg>2fw,2jl>2h8.2im,2jq>27,2jr>2g7,2js>2g8,2jz>2gf,2kh>li.lj,2ki>33,2kj>1vn,2ko>2kn.2mv,2kp>2a1,2kq>2a1.2mv,2ks>2lk.2m9,2kw>2bq.2ku,2kz>2ky.2m6,2l0>2ky.2mv,2l2>2b9,2l5>2lk.2m9,2l8>2a8,2lb>37,2lc>33,2lf>2ar,2lh>2b2,2lt>2ls,2lw>2b8,2ly>2ba,2m2>2an.2bj,2m7>2bj,2m8>2bj,2ma>2m9,2mb>2m9,2me>2bq,2mf>2br,2mg>2bq.2bq,2mm>1v5,2my>2lk.2ml.2lq,2n3>33.2ls.33,2n5>2la,2na>33,2ne>2ls.2ml,2nf>2li.2ml.2ls,2ng>2lk.2ml.2lk,2nh>1l,2ni>2lx.2ml.2ls,2nj>2lk.2ml,2nq>2m1.2ml.2lq,2nt>2lk.2m9,2nu>2ar.2ml,2nv>2lk.2ml,2nw>2ls.2ml,2nx>2lu.2ml,2ny>2lv.2ml,2o2>33,2o3>1vn,2od>2pv.2qg,2oi>2oh.2q2,2oj>2oh.2qh,2ph>2oh,2pi>2or,2pl>2ok,2ps>2ow,2pw>2pj,2qx>2qw.2q7,2qy>2oy,2qz>2pb,2r3>2qw.2qb,2rn>2rm,2rv>2ru,2rz>2ry,2s4>2ro,2s5>2ro,2s7>2s1,2sh>2rq,2sm>2sg,2sz>lm.2sy,2td>2tc.2tc,2th>2sy,2tp>lm,2ts>33,2vc>2rs,2vh>2si,2vu>2sa,2vv>2sb,2vx>2sd,2vy>2se,2vz>2sf,2wj>lm.2wi,2wo>2t4,2wp>2t5,2x4>2tk,2x5>2tl,2x6>2tm,2x7>2tn,2x9>lm,2xc>33,2xo>2wb.2vt,2xp>2wb.2w1,2yo>31k.324.326,2yq>31c.31w.32a.327,2yr>31c.31w.32a.2z8,2z0>2yz,2z2>2z1.2z1,2zf>2ze.2ze,2zi>2zh.2zh,2zj>2ze.2zh,307>md,31m>31e,31z>33m.31t.328,321>33n.31t.328,323>322.322,325>324.324,34e>2zh.2ze,34l>ggg,34m>ggd,35s>2ls.370,35u>2ls,35w>2r,368>33.370,36l>33,36n>36d.370,36r>2ls.370.37d.2ls.370,36x>36m.37g,36y>36m.37g.287.370.37e,375>287,37a>lm,37c>1vn,37k>33,37v>37u.37u,38a>2r,38h>36j.37i,38l>37l,38m>36d.37i,38v>36d.370.37i,38w>35v.37i,39a>399.37i,39d>2ls.37i,3a6>39f.lm,3a8>x3a,3br>33.370,3bs>2ls,3c7>3d,3cj>f1,3cv>33,3cx>3cw.3cw,3d0>3cz.3cz,3d4>3d3.3d3,3d6>3d5.3d5,3d9>3d8.3d8,3df>3cy.3cw,3dg>3cy.3cy,3dh>3cy.3cz,3di>3cy.3d3,3dj>3cz.3cw,3dk>3d1.3cy,3dl>3d1.3d1,3dm>3d1.3de,3dn>3d1.3d7,3do>3d2.3d3,3dp>3d2.3d7,3dq>3d3.3cw,3dr>3d3.3cy,3ds>3d3.3cz,3dt>3d3.3d5,3du>3d3.3d5.3cw,3dv>3d3.3d5.3cz,3dw>3d3.3d5.3d3,3dx>3d3.3d5.3d5,3dy>3d3.3d5.3d8,3dz>3d3.3d8,3e0>3d3.3da,3e1>3d3.3dc,3e2>3d3.3dd,3e3>3d3.3d7,3e4>3d3.3d3.3d7,3e5>3d5.3cw,3e6>3d5.3cy,3e7>3d5.3cz,3e8>3d5.3d1,3e9>3d5.3d2,3ea>3d5.3d3,3eb>3d5.3d3.3cw,3ec>3d5.3d5.3d5,3ed>3d5.3d7,3ee>3d5.3d8,3ef>3d5.3da,3eg>3d5.3db,3eh>3d5.3dc,3ei>3d5.3dd,3ej>3d1.3de,3el>3ek.3ek,3en>3em.3em,3ep>3d7.3cw,3eq>3d7.3cz,3er>3d7.3d2,3es>3d7.3d3,3et>3d7.3d5,3eu>3d7.3eo,3ev>3d7.3d7,3ew>3d7.3d8,3ex>3d7.3da,3ey>3d7.3dc,3ez>3d7.3dd,3f1>3d8.3d7,3f3>3f2.3f2,3f5>3f4.3f4,3f6>3da.3db,3f7>3da.3de,3fa>3dd.3d3,3fb>3dd.3d7,3fc>3de.3de,3fe>3cw.3cz,3ff>3cy.3d5,3fg>3cy.3d8,3fh>3cy.3de,3fi>3cz.3d1,3fm>3fl.ffs,3fo>3fn.ffs,3fq>3fp.ffs,3fs>3fr.ffs,3fu>3ft.3fl,3fv>3ft.3fl.ffs,3fw>3ft.ffs,3fz>3fy.3fp,3g0>3fy.3fp.ffs,3g1>3fy.ffs,3g3>9oc,3g4>9oc.ffs,3g5>ffs,3g6>3fl.3ft,3g7>3fl.3fy,3g8>3fn.3ft,3g9>3fn.3fx,3ga>3fp.3ft,3gb>3fp.3fy,3gc>3fp.9oc,3gd>3fr.3ft,3ge>3fr.3fy,3gf>3ft.3fp,3gg>3ft.3fp.ffs,3gh>3ft.3fr.ffs,3gi>3ft.3ft,3gj>3ft.3fy,3gk>3fx.3fn,3gl>3fx.3fn.ffs,3gm>3fx.3fn,3gn>3fx.3ft,3go>3fx.ffs,3gp>3fy.3fl,3gq>3fy.3fl.ffs,3gr>3fy.3fp.9oc,3gs>3fy.3fr.ffs,3gt>3fy.3fy,3gu>3g2.3fl,3gv>3g2.3fp,3gw>3g2.3fp.ffs,3gx>3g2.3fr,3gy>3g2.3fr.ffs,3gz>3g2.3fy,3h0>3g2.ffs,3h1>9oc.3fy,3h2>9oc.9oc,3h3>9oc.ffs.3fy,3h4>ffs.3fl,3h5>ffs.3fn,3h6>ffs.3ft,3h7>ffs.3fy,3h8>ffs.9oc,3h9>ffs.3ha,3hb>3ha.3fp,3hc>3ha.3fy,3hd>3ha.ffs,3he>3ha.3ha,3hf>3fl.9oc,3hg>3fn.3fy,3hh>3fr.3fn,3hi>3ft.3fn,3hj>3ft.3fn.ffs,3hk>3cw,3hl>3cw.3cw,3hm>3cw.3d5,3hn>3cy,3ho>3cy.3d8,3hp>3cy.3de,3hq>3cz,3hr>3d1,3hs>3d1.3cw,3ht>3d1.3d2,3hu>3d1.3d3,3hv>3d1.3d5,3hw>3d1.3dc,3hx>3d1.3dd,3hy>3d1.3de,3hz>3d2,3i0>3d3,3i1>3d3.3d5,3i2>3d5,3i3>3d5.3d5,3i4>3d7,3i5>3d8,3i6>3da,3i7>3db,3i8>3dc,3i9>3dd,3ia>3de,3ib>3cw.3d1,3ic>3cw.3d5.3cw,3id>3cy.3cw,3ie>3cy.3cz,3if>3cy.3d5,3ig>3cy.3eo,3ih>3cy.3dc,3ii>3cz.3cw,3ij>3cz.3d1,3ik>3d1.3cw.3d5,3il>3d1.3cy,3im>3d1.3cz,3in>3d1.3cz.3de,3io>3d1.3d1,3ip>3d1.3d2.3cw,3iq>3d1.3d2.3d5,3ir>3d1.3d3.3d5,3is>3d1.3d3.3de,3it>3d1.3d3.3d7,3iu>3d1.3d5.3d5,3iv>3d1.3eo,3iw>3d1.3db,3ix>3d1.3fd,3iy>3d2.3cw,3iz>3d2.3d1,3j0>3d2.3d3,3j1>3d2.3d5,3j2>3d2.3d5.3d5,3j3>3d2.3eo,3j4>3d2.3da,3j5>3d2.3de,3j6>3d2.3d7,3j7>3d3.3d1,3j8>3d3.3dd,3j9>3d3.3de,3ja>3d3.3d7,3jb>3d5.3cw,3jc>3d5.3cz,3jd>3d5.3d1,3je>3d5.3d3,3jf>3eo,3jg>3d7.3cw,3jh>3d7.3cw.3cw,3ji>3d7.3d7,3jj>3d7.3db,3jk>3f0,3jl>3d7.3d5,3jm>3d7.3eo,3jn>3dd.3d3,3jo>3dd.3d7,3jp>3de.3cy,3jq>3de.3d1,3jr>3de.3d2,3js>3de.3d3,3jt>3fd,3ju>3cw.3cy,3jv>3cw.3d3,3jw>3cw.3da,3jx>3cw.3db,3jy>3cw.3de,3jz>3cy.3cy,3k0>2d,3kz>hc,3ls>py,3mo>11k,3o4>12p,3ps>27,3vk>1w,3vl>2a,3vm>2c,3vo>27.13,3vp>2x,3vs>8s5,3vt>2h,3vu>1t,3vv>22,3vw>1x,3vy>1r,3w0>8s5,3w1>pf,3w3>2f,3w7>25,3wb>20,3wd>2h,3we>27.mt,3wf>bv,3wg>1z,3wi>2w,3wj>2i,3wn>v4,3wr>b4,3ws>2d.mt,3wu>1g,3wv>2q,3wy>2a,3x0>2f,3x1>2b,3x5>2e,3x6>2b,3xa>24,3xb>1v,3xe>28,3xi>23,3xj>2s,3xn>27.mt,3xq>1i,3xs>67,3xu>2w.lw,3xv>1z,3xw>1u,3y3>gy,3y4>ih,3y8>1p,3yb>pg,3yk>53.3y9,3yl>3y9.53,3ym>53.pg,3yn>pg.53,3yo>53.3yc,3yp>3yc.53,3yq>53.3yd,3yr>3yd.53,3ys>53.3ye,3yt>3ye.53,3yv>53.3yi,3yw>3yi.53,3yx>53.3yj,3yy>3yj.53,3zb>53,3zf>3y9.3z4,3zg>pg.3z4,3zh>3yd.3z4,3zi>3yi.3z4,3zj>2e,3zl>g5,3zn>1q,3zr>53.1q,3zs>1o,3zu>53.2e,3zv>2e.53,3zw>53.g5,3zx>g5.53,3zy>53.3zm,3zz>3zm.53,400>53.1q,401>1q.53,402>53.3zo,403>3zo.53,404>53.1o,405>1o.53,406>53.3zt,407>3zt.53,40a>13,40c>2d,40e>11k,40k>53.40g,40n>53.2d,40o>2d.53,40p>53.11k,40q>11k.53,40r>53.40f,40s>40f.53,40t>53.40g,40u>40g.53,40v>53.40h,40w>40h.53,40x>53.40l,40y>40l.53,40z>53.40m,410>40m.53,413>2d.13,414>11k.13,415>40g.13,416>40l.13,419>28,41b>2s,41e>2q,41f>2q.lj,41g>53.417,41h>417.53,41i>53.28,41j>34.53,41k>53.41a,41l>41a.53,41m>53.2s,41n>2s.53,41o>53.41c,41p>41c.53,41q>53.2q,41r>2q.53,41s>53.2q.lj,41t>2q.lj.53,41x>417.13,41y>28.13,41z>2s.13,420>2q.13,425>22,42a>53.421,42b>421.53,42c>53.423,42d>423.53,42e>53.424,42f>424.53,42g>53.22,42h>22.53,42i>53.426,42j>426.53,42k>53.428,42l>428.53,42m>53.429,42n>429.53,42t>pf,42y>24,430>53.42r,431>42r.53,432>53.pf,433>pf.53,434>53.42u,435>42u.53,436>53.42v,437>42v.53,438>53.42w,439>42w.53,43a>53.24,43b>30.53,43c>53.42z,43d>42z.53,43j>1e,43t>53.43k,43u>43k.53,43v>53.43r,43w>43r.53,43x>53.43s,43y>43s.53,441>3z5,44c>53.443,44d>443.53,44e>53.445,44f>445.53,44g>53.446,44h>446.53,44i>53.447,44j>447.53,44k>53.448,44l>448.53,44m>53.44a,44n>44a.53,44o>53.44b,44p>44b.53,452>53.44t,453>44t.53,454>53.44v,455>44v.53,456>53.44w,457>44w.53,458>53.44x,459>44x.53,45a>53.44y,45b>44y.53,45c>53.450,45d>450.53,45e>53.451,45f>451.53,45o>45n.1o,45p>45n.40l,45q>45n.2q,45r>45n.428,45z>53.45s,460>45s.53,461>53.45t,462>45t.53,463>53.45u,464>45u.53,465>53.45v,466>45v.53,467>53.45w,468>45w.53,469>53.45x,46a>45x.53,46b>53.45y,46c>45y.53,46n>53.1g,46o>1g.53,46p>53.46g,46q>46g.53,46r>53.46h,46s>46h.53,46t>53.46i,46u>46i.53,46v>53.46j,46w>46j.53,46x>53.46l,46y>46l.53,46z>53.46m,470>46m.53,474>3zd,475>3c,47i>53.47g,47j>47g.53,47v>53.47u,47w>47u.53,488>53.487,489>487.53,48n>61r,48s>20,48t>3c,48u>47k.418,48v>47k.28,48w>47k.41a,48x>47k.2s,48y>47k.41c,48z>47k.2q,490>47k.2q.lj,491>47k.41v,493>2a,49a>49h.422,49b>49h.423,49c>49h.424,49d>49h.22,49e>49h.426,49f>49h.428,49g>49h.429,4a7>2q,4ac>1y,4ad>6k2,4af>x6j,4as>8rz,4at>1t,4bi>1w,4bu>1w,4bz>v4,4c0>25,4c7>1u,4ci>428,4cj>421,4ck>443,4cn>44a,4de>477,4df>47a,4dg>47e,4dq>c1,4dr>q1,4dw>c1,4dx>q1,4fh>2g,4fi>3c,4fj>47k.417,4fk>49h.421,4fl>49i.423,4fm>49i.424,4fn>49i.22,4fo>49i.426,4fp>49i.428,4fq>49i.429,4fr>49z.53,4fs>4a0.53,4ft>4a1.53,4fu>4a2.53,4fv>4a3.53,4fw>4a4.53,4fx>4a5.53,4g0>w,4he>1o,4hj>2g,4ht>30,4hu>4hp,4i4>13,4id>23,4ie>25,4ig>q0,4ip>4ho,4iz>53,4j0>1m,4j1>17,4j4>py,4l0>4k5,4l1>1b,4nj>4ne,4o3>4o2,4on>2t0,4oo>2t1,4op>2t2,4oq>2t3,4p2>lm,4p7>2tk,4pf>lm,4pg>2sv,4ph>2u2,4pl>2tr,4pm>2u3,4ps>33,4qr>1m,4qx>1m,4t1>4s5,4uu>4t8,4vn>53.4vl,4vq>53.4vo,4vt>53.4vs,4w2>53.4w0,4w6>53.43m,4w7>43m.53,4w8>53.43n,4w9>43n.53,4wa>53.43o,4wb>43o.53,4wc>53.43p,4wd>43p.53,4we>53.477,4wf>53.47a,4wg>53.47b,4wh>53.47c,4wi>53.47d,4wj>53.47f,4wr>4xh,4ws>4wv.3z2,4wt>3z2.4wv,4ww>477.53,4wz>47y.53,4x0>486.53,4x1>48b.53,4x4>492.53,4x6>49j.53,4x9>v4.53,4xc>4c4.53,4xe>4d7.53,53k>526,53l>52p,58g>56t,58w>56t,59l>59k.59k,59n>59m.59k,59w>1cr,59z>mg,5ax>5ae,5b6>lg,5bb>5b9,5bc>lg.lg,5ea>5cd,5eb>5ch,5eg>5d4,5ek>5e8,5en>5em.5em,5ks>5kr.5kr,5mn>5mm.5mm,5ow>le,5oy>lg,5oz>13.13,5p1>mj,5p4>mm,5p5>ml,5p6>lq,5p8>mh,5p9>mb,5pa>mc,5pp>ly,5qc>2r,5qg>gs,5qj>8o,5ql>i5,5qn>33,5qo>gk,5qp>33,5qs>d9.33,5r0>39,5r4>3a,5r5>3b,5r6>3e,5r8>bs,5ra>36,5rb>i4,5rc>qo,5rd>5qw,5rf>u3,5ry>4wm,5si>56,5t7>39.2t,5ta>2u.ms,5tb>36.32.ms,5tc>32.ms,5te>36.ms,5tf>hq.ms,5tg>37.ms,5th>38.ms,5ti>3e.ms,5tk>5ro,5tn>2x.mt,5to>2x.mt,5tp>34.mt,5tq>39.mt,5tr>i2.mt,5tv>2v,5u4>3d,5u8>gb,5un>5sb,5uq>5sd,5ve>4wk,5vf>4ee,5wo>5ay,5wu>92k,5z7>xu9,61m>61v,61p>2u,61q>67,64f>3d,67x>6b8,69p>13,69q>2x,69r>13,69s>3i,6b3>13,6ba>3xr,6bh>13,6bi>13,6bk>w,6bl>w,6bm>w,6bn>w,6bo>w,6bp>w,6bq>w,6br>w,6bs>w,6bt>w,6bu>w,6c0>19,6c1>19,6c2>19,6c3>19,6c4>9oc,6c5>9oc,6c6>30.30,6c8>13,6c9>13,6ca>18,6cb>13,6cc>13.13,6cd>13.13,6cf>13.13,6ci>53,6ck>1a,6cl>1a.1a,6cm>1a.1a.1a,6cn>53,6co>w,6cp>w,6cv>w,6cw>56.1b.6f4.6f4,6cx>56.1b.6f4.6f4.6f4,6cy>13,6cz>13.13,6d0>13.13.13,6d1>13,6d2>13.13,6d3>13.13.13,6d5>1o,6d6>1q,6d8>x.x,6da>jt,6dd>1b,6df>19,6dg>1b,6dj>1r.1r,6dk>1r.x,6dl>x.1r,6dq>16,6du>56.1b.6f4,6dv>3i,6dz>13.13.13.13,6e2>1m,6e5>8yf,6e6>8xu,6e7>w,6eo>56,6ex>x2o,6g1>1v.6i3,6g4>4j,6g5>36.32.mw,6g8>2a.37,6g9>2f.mt,6gb>2s.mt.mp,6gc>x3m,6gd>23.mt,6ge>2c.6i3,6gm>30.38,6gt>11w,6gx>181.18p.30.18k,6hn>1cr,6io>2p.1b.2r,6ip>2p.1b.37,6iq>1v,6ir>4w.1v,6it>2r.1b.33,6iu>2r.1b.39,6iv>b4,6iw>tp,6ix>4w.1y,6iy>2v,6iz>20,6j0>20,6j1>20,6j2>2w,6j3>2w.mt,6j4>30,6j5>30,6j6>24,6j7>30,6j9>26,6ja>26.33,6jd>28,6je>29,6jf>2a,6jg>2a,6jh>2a,6jl>2c.1x.24,6jo>2i,6jq>q1,6jr>c1,6js>2i,6jt>hr,6ju>23,6jw>1u,6jx>1v,6jy>2t,6jz>2t,6k0>1x,6k1>1y,6k3>25,6k4>33,6k5>15c,6k6>15d,6k7>15e,6k8>15f,6k9>2x,6kb>1y.1t.2g,6kc>qo,6kd>3d,6ke>pf,6kf>ps,6kg>bt,6kh>wko,6ki>wl2,6kj>20hs,6kl>1w,6km>2s,6kn>2t,6ko>2x,6kp>2y,6lc>30,6ld>30.30,6le>30.30.30,6lf>30.2e,6lg>2e,6lh>2e.30,6li>2e.30.30,6lj>2e.30.30.30,6lk>30.2g,6ll>2g,6lm>2g.30,6ln>2g.30.30,6lo>24,6lp>1v,6lq>1w,6lr>25,6ls>2x,6lt>2x.2x,6lu>2x.2x.2x,6lv>2x.3a,6lw>3a,6lx>3a.2x,6ly>3a.2x.2x,6lz>3a.2x.2x.2x,6m0>2x.3c,6m1>3c,6m2>3c.2x,6m3>3c.2x.2x,6m4>30,6m5>2r,6m6>2s,6m7>36.32,6mb>au,6mc>gk,6mp>4i7,6mt>4iw,6np>6nm,6nu>2q6m,6ny>4ii,6nz>4i8,6o4>2rps,6oc>2rpt,6ps>8rz,6pv>b2,6py>pg,6q7>ps,6q9>bt,6qa>19,6qc>17.lj,6qd>1b,6qe>2k,6qf>16,6qg>4w,6qh>53,6qm>33.33,6qr>30,6qt>30.30,6qw>3a,6qx>11k,6qy>2d,6qz>hv,6r0>hv.hv,6r1>hv.hv.hv,6r3>6r2.6r2,6r4>6r2.6r2.6r2,6ra>1m,6rc>19.lj,6rg>3i,6s0>1p.lj,6s1>1p.lj.mb,6s7>1p.lm,6s9>1p.le,6sa>1p.li,6se>1p.ob,6sj>6sh,6sq>1o.1o,6sr>1q.1q,6te>40l,6tf>40g,6tx>1f3c,6ty>27.mt,6u1>ig,6u5>27.mt,6uc>2c,6ud>wk5,6v4>6qv,6v5>3a,6v6>11k,6v7>2d,6v8>4ik,6v9>53,6vc>4im,6vq>1o.53,6vr>53.1q,6vs>1o.1o.1o,6vt>1q.1q.1q,6we>8yf,6wf>53.53.53,6wk>x3n,6wv>1x,6ww>6px,6xx>6xw,6y1>7sc,6y2>7sd,6yp>9j0,6zd>pg.mq,6ze>4ik.mq,6zg>4w.mq,6zj>6u3,6zl>2c.lk,6zm>6pz.lk,6zn>6va.lk,6zo>4w.lk,6zp>17t,6zs>3i.lk,6zt>3zp,6zv>6pz.ms,6zw>27.mt,703>2x,704>34,705>qx,706>2p.mq,707>x3n.mq,708>2x.mq,709>qx.mq,70a>2p,70f>4hp,718>ffs,71b>ffs,71e>ffs,71h>ffs,71m>ffs,71q>ffs,729>6z9,72a>6z2,72b>6yz,72e>6zx,73c>6f5.6f4,73w>73v,73x>30,73y>7jy,762>2k.2k,76o>7sw,76p>7sx,76q>7sy,76r>7sz,76s>7t0,76t>7t1,76u>7t2,76v>7t3,76w>7t4,76x>7t5,778>14.30.15,779>14.1e.15,77a>14.1f.15,77b>14.1g.15,77c>14.1h.15,77d>14.1i.15,77e>14.1j.15,77f>14.1k.15,77g>14.1l.15,77h>14.30.27.15,77i>14.30.30.15,77j>14.30.1e.15,77k>14.30.1f.15,77l>14.30.1g.15,77m>14.30.1h.15,77n>14.30.1i.15,77o>14.30.1j.15,77p>14.30.1k.15,77q>14.30.1l.15,77r>14.1e.27.15,77s>30.1a,77t>1e.1a,77u>1f.1a,77v>1g.1a,77w>1h.1a,77x>1i.1a,77y>1j.1a,77z>1k.1a,780>1l.1a,781>30.27.1a,782>30.30.1a,783>30.1e.1a,784>30.1f.1a,785>30.1g.1a,786>30.1h.1a,787>30.1i.1a,788>30.1j.1a,789>30.1k.1a,78a>30.1l.1a,78b>1e.27.1a,78c>14.2p.15,78d>14.2q.15,78e>14.2r.15,78f>14.2s.15,78g>14.2t.15,78h>14.2u.15,78i>14.2v.15,78j>14.2w.15,78k>14.2x.15,78l>14.2y.15,78m>14.2z.15,78n>14.30.15,78o>14.36.32.15,78p>14.32.15,78q>14.33.15,78r>14.34.15,78s>14.35.15,78t>14.36.15,78u>14.37.15,78v>14.38.15,78w>14.39.15,78x>14.3a.15,78y>14.3b.15,78z>14.3c.15,790>14.3d.15,791>14.3e.15,794>4p,79h>6jb,79j>4u,7a3>79a,7ai>2q6l,7b4>9oc,7b5>9oc,7b7>7b6,7bj>7bg,7c3>7bw,7e2>ci,7e9>1b,7eb>2g,7ew>6q6,7f4>7f0,7f8>jt,7fb>7fa,7fh>7fc,7fk>6q6,7g1>739,7g3>pg,7g7>6ur,7g8>7g6,7ga>7g6,7gd>1f3w,7gh>6uq,7gn>4ik,7gq>4ik,7gr>4w,7gu>6ym,7hc>6xe,7hi>4w,7ih>ig,7io>7fl,7j9>1ggu,7jk>pq,7js>70o,7ke>6rz,7kn>2s0l,7kt>2s0n,7ky>4ik,7l5>2jx4.2jxh,7l6>2jx4.2jxh.2jxq,7n0>1v4,7s8>14,7s9>15,7se>1o,7sf>1q,7si>14,7sj>15,7sk>3f,7sl>3h,7th>17,7ti>19,7tj>6v,7uq>wk5,7uw>2k.40l,7ux>40g.1b,7uz>1b,7v1>2k,7vd>2c,7vs>7sc,7vt>7sd,83j>2jfk,84r>3c,84s>3c,86b>4i8.4ii,86d>6o3.6o2,86m>4i8.6o2,86n>6o3.4ii,87t>8xu,88g>6yx,88l>2jg0,88u>6ym,890>9j0,891>6yq,893>6yj,89i>1f40,89l>87u,8ac>1m.6mq,8ad>2k,8ae>1b.lg,8ag>1b,8ah>2k,8ao>ig,8ap>1f3c,8aq>6tz,8ar>6tp,8as>6tq,8at>6tv,8au>6tw,8b0>hv.hv.hv.hv,8bh>4im,8bk>1q.1q,8bl>4ii,8bm>17.lm,8bn>17.le,8bo>17.lf,8bp>17.mb,8bq>17.mo,8br>17.6f6,8bt>19.lv,8bu>19.mb,8bz>3c,8c0>3c.lj,8cd>6xl,8ce>8bj,8cf>6q8,8dm>3i.lj,8dq>1p.6i8,8dw>1m.1m.1p,8dx>1p.1p,8dy>1p.1p.1p,8f9>1q.1o,8fe>4b9,8ff>4b6,8gn>40g.40l,8hn>1b.1b.1b,8hp>1b.1b,8ly>1p.59u,8oc>6n2,8od>6n3,8oe>6n4,8of>6n5,8rr>20.mh,8rt>23.mh,8si>1u,8sj>ih,8sk>pf,8sl>36,8sm>pg,8so>x3m,8sp>x3n,8sr>qq,8ss>8rv,8st>8rw,8su>20,8sv>ik,8sw>27.mt,8sx>33.mt,8sy>30,8sz>2x,8t0>23,8t1>8o,8t2>qj,8t3>i4,8t4>25,8t5>i5,8t6>26,8t7>hg,8t8>1f,8t9>ib,8ta>27,8tb>33,8tc>ps,8td>qo,8te>28,8tf>34,8tg>1v,8th>2r,8ti>2c,8tj>5qz,8tk>2h,8tl>3d,8tm>py,8tn>hk,8to>2g,8tp>qv,8tq>q0,8tr>qw,8ts>wuk,8tt>qx,8tu>19.lj,8tv>19.lj,8tw>1o.53,8tx>1o.53,8ty>pq,8tz>6sh,8u2>19,8u3>19,8u4>tk,8u5>3b,8u8>11w,8u9>sc,8uc>1f,8ud>f1,8ue>1b,8uf>1b,8ui>1l,8uj>1l,8uk>1f,8ul>f1,8um>28,8un>34,8uo>24,8up>in,8uq>1i,8ur>1i,8v0>1i,8v1>61r,8v4>hk,8v5>hk,8v8>rb,8vc>11w,8vd>7jb,8vt>2k.2k,8xd>27.mt,8xj>g5,8xk>2e,8xl>1x,8xm>b2,8xt>27.mw,8y0>53.53.53,8y1>bt,8y7>30,8y9>x,8yc>27,8yd>29,8yh>ig,8yl>2g,8yo>pg,8yr>4j3,92g>5wf,92i>lm,92l>o8,92m>5az,92n>of,92u>o3,92v>o4,93u>19.lk,93y>3i.lj,93z>3i.mb,946>40l,947>40g,948>14.14,949>15.15,94a>6r9,94b>6r8,94c>6rb,94e>17j,94g>4w,94h>53,94i>170,94l>17f,94p>61r,94t>8xu,94v>52,94w>1p,96q>fh7,96r>fh6,96t>fjv,96x>g76,96z>aim,972>g1s,973>i77,974>i76,976>ik3,977>inu,978>itt,97a>ix0,97b>b96,97c>jf0,97d>jzp,97f>k4h,97i>l8a,97j>lal,97k>lch,97l>ldh,97m>ldm,97n>m7g,97o>mjv,97q>ffw,97s>mnh,97v>p5e,97x>ny3,97z>oop,981>p5f,982>p5e,989>paa,98a>pds,98e>prt,98f>prt,98g>prt,98h>qj2,98i>qxw,98j>r5s,98k>r5r,98l>r7l,98o>rkw,98p>rvh,98r>sbq,98s>sdy,98t>sdy,98v>tnh,98w>tc5,98x>3dc.9oc.3cy.3d8,98y>tiw,98z>tj3,990>tm0,992>tnh,994>tw2,995>u06,996>u45,997>u6m,998>u72,999>u73,99b>u74,99c>uar,99e>ui4,99g>unw,99h>uws,99k>vc6,99l>vd0,99n>k21,99o>vgw,99p>l7z,99q>vi7,99r>o9o,99s>vix,99u>fi8,99v>vj3,9a8>9oc,9a9>ffs,9aa>2k,9ab>1b,9ac>fh5,9ad>fid,9ae>fik,9af>fj4,9ag>fju,9ah>g1r,9ai>g2t,9aj>g2z,9ak>g3m,9al>g46,9am>g4r,9an>g68,9ao>g6t,9ap>g74,9aq>gbf,9ar>ge1,9as>get,9at>gey,9au>gfs,9av>gg1,9aw>ggs,9ax>gh5,9ay>ghu,9az>gja,9b0>gjs,9b1>gkj,9b2>gkj,9b3>h7j,9b4>h7j,9b5>hky,9b6>hl6,9b7>hlh,9b8>hlz,9b9>ho3,9ba>i1c,9bb>i2o,9bc>i60,9bd>i6n,9be>i76,9bf>i7s,9bg>i9a,9bh>i9d,9bi>ijf,9bj>ijp,9bk>ik1,9bl>ike,9bm>inm,9bn>inu,9bo>inz,9bp>ir8,9bq>iri,9br>irv,9bs>is3,9bt>its,9bu>iu9,9bv>iur,9bw>iwz,9bx>jd4,9by>jee,9bz>jez,9c0>jzj,9c1>jzo,9c2>k1z,9c3>k2f,9c4>k2s,9c5>k3d,9c6>k4g,9c7>k4l,9c8>kc0,9c9>kco,9ca>kdk,9cb>l5s,9cc>l7m,9cd>l89,9ce>l9v,9cf>laj,9cg>las,9ch>laz,9ci>lcf,9cj>lck,9ck>ldg,9cl>m7f,9cm>mju,9cn>mk6,9co>mkb,9cp>3cy.3fy.ffs,9cq>mkn,9cr>ml5,9cs>ml7,9ct>mng,9cu>mtg,9cv>mtl,9cw>n30,9cx>n3a,9cy>n4o,9cz>n4v,9d0>n54,9d1>n5c,9d2>n7v,9d3>n82,9d4>nee,9d5>nel,9d6>nfy,9d7>ngf,9d8>nhq,9d9>nob,9da>noi,9db>noz,9dc>ny2,9dd>o1k,9de>o1q,9df>o6s,9dg>o97,9dh>oah,9di>okz,9dj>ooo,9dk>p4m,9dl>p5d,9dm>p6y,9dn>p8d,9do>pa9,9dp>pak,9dq>paq,9dr>pbn,9ds>pdr,9dt>pe1,9du>pnn,9dv>pnu,9dw>po3,9dx>poc,9dy>pos,9dz>pp7,9e0>ppb,9e1>pri,9e2>prm,9e3>prs,9e4>qj1,9e5>qjv,9e6>qww,9e7>qx8,9e8>qxv,9e9>r5q,9ea>r63,9eb>r82,9ec>r9c,9ed>rp3,9ee>rpi,9ef>rpx,9eg>rqw,9eh>rrx,9ei>rxg,9ej>rxs,9ek>rzn,9el>s6j,9em>s7e,9en>sd7,9eo>sds,9ep>sdx,9eq>sk1,9er>sp5,9es>ssm,9et>sss,9eu>ssx,9ev>3dc.9oc.3cy.3d8,9ew>tj4,9ex>tng,9ey>trq,9ez>trt,9f0>tt4,9f1>tw1,9f2>twe,9f3>twi,9f4>twp,9f5>tzf,9f6>u0d,9f7>u0j,9f8>u0x,9f9>u5k,9fa>u6z,9fb>u73,9fc>uc6,9fd>uc9,9fe>ucs,9ff>ujs,9fg>ul4,9fh>ulb,9fi>un9,9fj>unj,9fk>unm,9fl>unw,9fm>uoq,9fn>uzp,9fo>vat,9fp>vb3,9fq>vc5,9fr>vcr,9fs>vcz,9ft>vd9,9fu>vdd,9fv>veh,9fw>vel,9fx>vf2,9fy>vf7,9fz>vfk,9g0>vgb,9g1>vgq,9g2>vgy,9g3>vil,9g4>vj0,9g5>vj4,9he>kz,9hf>13.13,9hj>27,9hk>7sc,9hl>7sd,9hu>6go,9hw>14,9hx>15,9i2>7vq,9i3>7vr,9ik>ll,9il>md,9ir>1b,9iu>6go,9iw>gg1,9ix>gg4,9iy>gg5,9jj>7sc,9lm>lm,9ln>1ehq,9lo>1ehr,9ls>1p,9lw>fjv,9m0>ijp,9m3>gbf,9mn>hlh,9mw>ggs,9mz>fik,9n2>1b,9n3>g2z,9nc>9ko,9nx>gkj,9ob>53,9pi>g1r,9pt>3cw,9pu>3cw.3cw,9pv>3cw.3d5,9pw>3cy,9px>3cy.3d8,9py>3cy.3de,9pz>3cz,9q0>3cz.3cz,9q1>3d1,9q2>3d1.3cw,9q3>3d1.3d2,9q4>3d1.3d3,9q5>3d1.3d5,9q6>3d1.3dc,9q7>3d1.3dd,9q8>3d1.3de,9q9>3d2,9qa>3d3,9qb>3d3.3d3,9qc>3d3.3d5,9qd>3d5,9qe>3d5.3d5,9qf>3d7,9qg>3d8,9qh>3d8.3d8,9qi>3da,9qj>3db,9qk>3dc,9ql>3dd,9qm>3de,9qn>3fl,9qo>3fl.ffs,9qp>3fn,9qq>3fn.ffs,9qr>3fp,9qs>3fp.ffs,9qt>3fr,9qu>3fr.ffs,9qv>3ft,9qw>3ft.3fl,9qx>3ft.3fl.ffs,9qy>3ft.ffs,9qz>3fx,9r0>3fy,9r1>3fy.3fp,9r2>3fy.3fp.ffs,9r3>3fy.ffs,9r4>3g2,9r5>9oc,9r6>9oc.ffs,9r7>ffs,9r8>3fk,9r9>3cy.3cy,9ra>3cy.3cz,9rb>3cy.3d5,9rc>3cy.3eo,9rd>3d1.3cw.3d5,9re>3d1.3cz,9rf>3d1.3d3.3d5,9rg>3d1.3eo,9rh>3d1.3fd,9ri>3d2.3d3,9rj>3d2.3d5,9rk>3d2.3eo,9rl>3d2.3d7,9rm>3d3.3cw,9rn>3d3.3cz,9ro>3d3.3d5.3cw,9rp>3d3.3d5.3cz,9rq>3d3.3d8,9rr>3d3.3dc,9rs>3d3.3d7,9rt>3d3.3d3.3d7,9ru>3d5.3cw,9rv>3d5.3cy,9rw>3d5.3cz,9rx>3d5.3d3,9ry>3d5.3d8,9rz>3eo,9s0>3d7.3d7,9s1>3f0,9s2>3d7.3d5,9s3>3d7.3eo,9s4>3dd.3d7,9s5>3de.3de,9s6>3fd,9s7>3fx.3fn,9s8>3fx.3fn.ffs,9s9>3fx.ffs,9sa>3g2.3fr,9sb>3g2.3fr.ffs,9sc>3g2.ffs,9sd>3ha,9se>3ha.ffs,9u8>9oc,9u9>ffs,9ub>1b,9uc>2k,9ue>fh7,9ui>fid,9uj>7sc,9un>fh6,9uo>fh5,9vk>14.3cw.15,9vl>14.3cy.15,9vm>14.3cz.15,9vn>14.3d1.15,9vo>14.3d2.15,9vp>14.3d3.15,9vq>14.3d5.15,9vr>14.3d7.15,9vs>14.3d8.15,9vt>14.3da.15,9vu>14.3db.15,9vv>14.3dc.15,9vw>14.3dd.15,9vx>14.3de.15,9vy>14.xz4.15,9vz>14.yvs.15,9w0>14.zc4.15,9w1>14.108s.15,9w2>14.10p4.15,9w3>14.115g.15,9w4>14.1224.15,9w5>14.12ys.15,9w6>14.13f4.15,9w7>14.14bs.15,9w8>14.14s4.15,9w9>14.158g.15,9wa>14.15os.15,9wb>14.1654.15,9wc>14.13p8.15,9wd>14.1350.13ic.15,9we>14.1350.16f8.15,9wg>14.9oc.15,9wh>14.fik.15,9wi>14.fex.15,9wj>14.h5n.15,9wk>14.fis.15,9wl>14.g31.15,9wm>14.fer.15,9wn>14.g2z.15,9wo>14.fh9.15,9wp>14.gg1.15,9wq>14.kco.15,9wr>14.m7f.15,9ws>14.ldg.15,9wt>14.kdk.15,9wu>14.ssx.15,9wv>14.h7j.15,9ww>14.k4l.15,9wx>14.kkq.15,9wy>14.kcp.15,9wz>14.ny6.15,9x0>14.glp.15,9x1>14.mm1.15,9x2>14.rs1.15,9x3>14.nz1.15,9x4>14.gc4.15,9x5>14.fkz.15,9x6>14.gos.15,9x7>14.i1y.15,9x8>14.nhf.15,9x9>14.flt.15,9xa>14.rt3.15,9xb>14.ggk.15,9xc>14.nzh.15,9xd>14.fm9.15,9xe>14.pnu.15,9xf>14.po3.15,a0w>30.kco,a0x>1e.kco,a0y>1f.kco,a0z>1g.kco,a10>1h.kco,a11>1i.kco,a12>1j.kco,a13>1k.kco,a14>1l.kco,a15>30.27.kco,a16>30.30.kco,a17>30.1e.kco,a54>27.m9l,a55>30.m9l,a56>1e.m9l,a57>1f.m9l,a58>1g.m9l,a59>1h.m9l,a5a>1i.m9l,a5b>1j.m9l,a5c>1k.m9l,a5d>1l.m9l,a5e>30.27.m9l,a5f>30.30.m9l,a5g>30.1e.m9l,a5h>30.1f.m9l,a5i>30.1g.m9l,a5j>30.1h.m9l,a5k>30.1i.m9l,a5l>30.1j.m9l,a5m>30.1k.m9l,a5n>30.1l.m9l,a5o>1e.27.m9l,a5p>1e.30.m9l,a5q>1e.1e.m9l,a5r>1e.1f.m9l,a5s>1e.1g.m9l,a8w>30.k4l,a8x>1e.k4l,a8y>1f.k4l,a8z>1g.k4l,a90>1h.k4l,a91>1i.k4l,a92>1j.k4l,a93>1k.k4l,a94>1l.k4l,a95>30.27.k4l,a96>30.30.k4l,a97>30.1e.k4l,a98>30.1f.k4l,a99>30.1g.k4l,a9a>30.1h.k4l,a9b>30.1i.k4l,a9c>30.1j.k4l,a9d>30.1k.k4l,a9e>30.1l.k4l,a9f>1e.27.k4l,a9g>1e.30.k4l,a9h>1e.1e.k4l,a9i>1e.1f.k4l,a9j>1e.1g.k4l,a9k>1e.1h.k4l,a9l>1e.1i.k4l,a9m>1e.1j.k4l,a9n>1e.1k.k4l,a9o>1e.1l.k4l,a9p>1f.27.k4l,a9q>1f.30.k4l,beb>app,dcr>ako,dgg>bp7,dxx>3gz2,feo>9oc,ff9>3d8.3ft,fff>3d5.3d5.9oc,fg6>2k,fgf>1b,fim>2dk2,fka>3d5.9oc.3cw,fsy>fp1,fuk>ftw,g2a>20oj,ggv>3d2.3fl,glk>3d5.9oc.3d2,gv3>gur,h5j>gkj,hgr>hgh,hkb>h7j,hkv>hij,hz4>hwv,ilu>ild,imo>bp6,j7c>3tbz,jeg>jee,jrd>bi9,k83>cov,k89>k7u,kc6>bmi,kdi>dhf,kjj>kfi,kx5>bs3,kyv>kv1,lzt>lu0,mkf>3cy.3fy.ffs,nrj>npw,os6>or9,peu>kcs,pfu>kcw,pg0>kcv,ph2>bp1,phd>kcz,pif>kd4,pj5>ph8,plz>kdf,qbj>q6l,qip>qif,ra6>dyu,rct>ram,rkf>rk6,rqb>rq4,rye>ry7,s1m>s11,s63>s5z,s9z>s8v,sm6>slq,t66>t65,tiv>3dc.9oc.3cy.3d8,trs>trr,v9f>v9e,vde>vdd,vk3>cop,wic>w5p,wik>vr4,wim>vnu,wiv>wgo,wiw>vua,wj0>vo0,wj4>wci,wje>wcf,wji>w4x,wjj>w2h,wjk>wbv,wjm>wc5,wk0>1u,wk1>28,wk2>2s,wk3>1w,wk4>2c,wk6>1z,wk7>23,wk9>22,wka>1v,wkb>au,wkc>2i,wkd>1y,wke>6k2,wkf>25,wkg>26,wkh>24,wki>2b,wkj>2a,wkl>g5,wkm>2e,wkn>20,wkq>2f,wkr>2g,wks>2h,wkt>4f4,wku>1t,wkv>8rz,wkw>1x,wkx>b2,wky>30,wkz>27,wl0>2d,wl1>11k,wl3>4bl,wl4>1a,wl5>18,wl6>1a.1a,wl7>1a.18,wl9>1m,wla>19.1a,wlb>1p,wsu>1a,wuc>1e,wud>bs,wuf>2x,wul>qx,wuo>tm.30,wup>jt.2q.2x,wvc>ig,wvj>6i1,wvw>li,wvy>jr,wwl>2w.lw,wwo>27.27,wwp>33.33,wwq>1f3c,wwx>t4,wxc>4hl,wxd>8s5,wy5>ip,wy6>g5,wyj>ps,wyn>2e,wyz>1r,wz3>1e,wz4>le,wz5>lg,wz8>wz7.wz7,x04>kr,x06>kq,x0o>2c.1f,x0p>38.f1,x0x>37,x0y>1t.1t,x0z>2p.2p,x10>1t.27,x11>2p.33,x12>1t.2d,x13>2p.39,x14>1t.2e,x15>2p.3a,x16>1t.2e,x17>2p.3a,x18>1t.2h,x19>2p.3d,x1c>23.mt,x1m>27.mt,x1n>33.mt,x1q>27.27,x1r>33.33,x22>1e,x29>3b.me,x2i>1f,x2j>f1,x2m>1l,x2v>38.2u,x2w>12,x2y>x2x,x3d>1m,x3g>13,x3j>53,x3p>x0n,x3s>1y,x3t>2u,x3u>1fde,x3v>1fei,x3x>ii,x3y>wkk,x3z>39,x4b>1f,x4h>wk5,x4i>22,x4j>2g,x4k>1u,x4l>67,x4m>wuk,x4n>qx,x5b>x5a,x5e>x5f,x5g>x5h,x5i>67,x5m>g5,x5n>qj,x5o>g5.mw,x69>4xh,x6f>9oc,x80>1us,xgg>3cz.3d2,xgh>3cz.3d3,xgi>3cz.3d5,xgj>3cz.3d8,xgk>3d1.3cw,xgl>3d1.3cw.3cw,xgm>3d1.3cz,xgn>3d1.3cz.3cz,xgo>3d1.3d2,xgp>3d1.3d3,xgq>3d1.3d3.3d3,xgr>3d1.3d3.3d7,xgs>3d1.3d5,xgt>3d1.3d8,xgu>3d1.3db,xgv>3d2.3cw,xgw>3d2.3cz,xgx>3d2.3d5,xgy>3d3.3d5.3dc,xgz>3d3.3db,xh0>3d3.3de,xh1>3d5.3d5.3d3,xh2>3d7.3d1,xh3>3d7.3de,xh4>3d8.3d8.3de,xh5>3dc.3dc,xh6>3dd.3de,xh7>3de.3d5,xh8>3fd.3fd,xhu>8qn,xib>xi5,xja>xjk,xjj>19e,xn7>xkx,xna>xlv,xte>2t,xth>2u,xtp>33,xtq>33.mw,xtr>gk.mw,xtt>d9.33.mw,xtu>d9.33.mt,xtz>36,xu0>36,xu5>hv,xu6>39,xua>39,xub>qv,xud>qv,xui>3d,xuo>ux,xuq>gk.2t,xur>39.33,xv4>5qd,xv5>hs,xv6>5qz,xv8>33.m3,xv9>2x,xve>5q8,xvf>5qi,xvg>5qf,xvi>g2,xvk>8s6,xvl>36,xvn>3b,xvr>i5,xvv>ik,xvy>33.mt,xw0>gy,xw3>3e,xwb>x3n,xwc>39.mt,xwf>at,xwi>hs,xwp>3a,xwq>37,xwu>in,xwv>2r,xwy>5qw,xx2>8o,xx7>33.mt,16ls>3ft.3fr,16lt>3ft.3ft.ffs,16lu>3fx.3fl,16lv>3fx.3fl.ffs,16lw>3fx.3fp,16lx>3fy.3fr,16ly>3fy.ffs.ffs,16lz>3g2.3fl.ffs,16m0>3g2.3ft,16m1>9oc.3fl,16m2>9oc.3fp,16m3>9oc.3fp.ffs,16m4>9oc.3ft,16m5>ffs.3fn.3ft,16m6>ffs.3fn.ffs,16m7>ffs.3fr,16m8>ffs.3fr.ffs,16m9>ffs.3ft.ffs,16ma>ffs.3fx,16mb>ffs.3g2,16mc>ffs.ffs,16md>3ha.3fl,16me>3ha.3fp.ffs,16mj>3cy.3d1,16mk>3cy.3da,16ml>3cz.3cz,16mm>3cz.3cz.3d3,16mn>3cz.3d3,16mo>3cz.3d5,16mp>3cz.3d5.3cw,16mq>3cz.3d8,16mr>3cz.3da,16ms>3cz.3dc,16mt>3d1.3cw.3cw,16mu>3d1.3cw.3de,16mv>3d1.3d1.3db,16mw>3d1.3d2.3de,16mx>3d1.3d3.3cz,16my>3d1.3d3.3dd,16mz>3d1.3f0,16n0>3d1.3fd.3de,16n1>3d1.3d7,16n2>3d2.3cy,16n3>3d2.3cy.3cy,16n4>3d2.3d2,16n5>3d2.3d3.3d5,16n6>3d2.3d8,16n7>3d3.3cz,16n8>3d3.3d1.3dd,16n9>3d3.3d2,16na>3d3.3d3,16nb>3d3.3d5.3cz,16nc>3d3.3d8,16nd>3d3.3da,16ne>3d5.3d2,16nf>3d5.3d3.3d7,16ng>3d5.3d5.3cw,16nh>3d5.3d5.3cz,16ni>3d5.3eo,16nj>3d5.3d8,16nk>3d5.3da,16nl>3d5.3dc,16nm>3d1.3de,16nn>3eo.3d3,16no>3eo.3d3.3d7,16np>3f0.3d2,16nq>3f0.3de,16nr>3d8.3d3,16ns>3d8.3d3.3d3,16nt>3d8.3d8,16nu>3dd.3d5,16nv>3dd.3dc,1d6o>rpk,1d6p>kc4,1d6q>s7e,1d6r>rt4,1d6s>lw1,1d6t>fg2,1d6u>gkl,1d6v>vj0,1d6w>vj0,1d6x>hn5,1d6y>ssx,1d6z>gw7,1d70>hmw,1d71>jcm,1d72>ne1,1d73>p6t,1d74>qin,1d75>qt6,1d76>r20,1d77>sjz,1d78>kxu,1d79>ljv,1d7a>mah,1d7b>mvy,1d7c>q4d,1d7d>sq2,1d7e>uep,1d7f>fia,1d7g>ghh,1d7h>l50,1d7i>mjf,1d7j>qi5,1d7k>v8e,1d7l>ifk,1d7m>m3v,1d7n>qfh,1d7o>r50,1d7p>jih,1d7q>pnc,1d7r>qvz,1d7s>iq2,1d7t>kd3,1d7u>lm2,1d7v>mpo,1d7w>slq,1d7x>fpi,1d7y>g53,1d7z>gda,1d80>jwk,1d81>l3n,1d82>mj4,1d83>nhj,1d84>pa9,1d85>qh2,1d86>qjg,1d87>s1b,1d88>tv6,1d89>upb,1d8a>v7e,1d8b>nt8,1d8c>nzz,1d8d>otc,1d8e>q15,1d8f>t1g,1d8g>vb3,1d8h>rfa,1d8i>hjz,1d8j>iro,1d8k>okg,1d8l>pdq,1d8m>mle,1d8n>nuy,1d8o>rsy,1d8p>ttj,1d8q>hjs,1d8r>i8y,1d8s>kyb,1d8t>lp6,1d8u>lxr,1d8v>oq7,1d8w>oxj,1d8x>tor,1d8y>gcy,1d8z>pe3,1d90>g64,1d91>g5o,1d92>o4c,1d93>ou6,1d94>q29,1d95>tpx,1d96>rk0,1d97>jin,1d98>kxu,1d99>rge,1d9a>fg9,1d9b>i5j,1d9c>iz6,1d9d>mtj,1d9e>n74,1d9f>gev,1d9g>nwb,1d9h>fr3,1d9i>iw9,1d9j>ff1,1d9k>lho,1d9l>k1k,1d9m>opu,1d9n>gjn,1d9o>hge,1d9p>ni9,1d9q>q4p,1d9r>re2,1d9s>la2,1d9t>sds,1d9u>lfs,1d9v>jjy,1d9w>put,1d9x>jog,1d9y>n6t,1d9z>fji,1da0>g2x,1da1>g5l,1da2>kn5,1da3>oo7,1da4>prj,1da5>rf6,1da6>ssv,1da7>gdx,1da8>gn6,1da9>ho3,1daa>ir0,1dab>k3p,1dac>m4e,1dad>nxm,1dae>tkd,1daf>ui2,1dag>vbr,1dah>vda,1dai>gbf,1daj>kau,1dak>l87,1dal>sbm,1dam>ino,1dan>j9s,1dao>jcw,1dap>jve,1daq>lyb,1dar>mdl,1das>n0p,1dat>o22,1dau>ovo,1dav>pdb,1daw>s9y,1dax>q9a,1day>sgz,1daz>t3e,1db0>g7r,1db1>gbn,1db2>gql,1db3>ma0,1db4>r0i,1db5>re2,1db6>iq1,1db7>iyd,1db8>jnf,1db9>l9q,1dba>oji,1dbb>mt1,1dbc>fl0,1dbd>h6h,1dbe>i5j,1dbf>iii,1dbg>izg,1dbh>muq,1dbi>mzt,1dbj>p7e,1dbk>pc6,1dbl>svo,1dbm>tti,1dbn>tvs,1dbo>u1k,1dbp>fpn,1dbq>o1a,1dbr>ss4,1dbs>trr,1dbt>j4x,1dbu>fie,1dbv>fyy,1dbw>i5q,1dbx>i7z,1dby>k2h,1dbz>kxu,1dc0>mha,1dc1>ncy,1dc2>q9o,1dc3>sjg,1dc4>vil,1dc5>k94,1dc6>tny,1dc7>gax,1dc8>kfv,1dc9>kj7,1dca>lkx,1dcb>luk,1dcc>mx5,1dcd>n6h,1dce>nsb,1dcf>opc,1dcg>u3i,1dch>g31,1dci>je6,1dcj>tq0,1dck>fu3,1dcl>ie1,1dcm>lpm,1dcn>sa2,1dco>ivf,1dcp>j7o,1dcq>kk7,1dcr>mtj,1dcs>tqe,1dct>g89,1dcu>glr,1dcv>i91,1dcw>k5v,1dcx>kem,1dcy>ko8,1dcz>lid,1dd0>mx2,1dd1>naa,1dd2>p6h,1dd3>r0v,1dd4>r1d,1dd5>sss,1dd6>tsy,1dd7>gfz,1dd8>lve,1dd9>gm5,1dda>mhc,1ddb>n14,1ddc>qgq,1ddd>tr7,1dde>uvr,1ddf>vbz,1ddg>kgn,1ddh>lor,1ddi>pns,1ddj>o97,1ddk>obk,1ddl>olu,1ddm>mo0,1ddn>m8p,1ddo>riw,1ddp>fk0,1ddq>px2,1ddr>g8q,1dds>g7b,1ddt>ip2,1ddu>jir,1ddv>onq,1ddw>i2t,1ddx>ljy,1ddy>kac,1ddz>saj,1de0>qx8,1de1>tot,1de2>r63,1de3>iqb,1de4>g1s,1de5>gxs,1de8>hga,1dea>k8k,1ded>g66,1dee>mqy,1def>ngq,1deg>ny4,1deh>nz2,1dei>nz9,1dej>o0f,1dek>tw6,1del>on2,1dem>p8d,1deo>qhe,1deq>rg8,1det>shk,1deu>sn1,1dey>u7j,1dez>u7w,1df0>u94,1df1>v5g,1df2>slq,1df3>trr,1df4>fqm,1df5>fzb,1df6>g25,1df7>gcp,1df8>gdg,1df9>ggh,1dfa>gwt,1dfb>gzq,1dfc>h2g,1dfd>hfk,1dfe>hig,1dff>i90,1dfg>i9a,1dfh>j2s,1dfi>j8o,1dfj>j9q,1dfk>jci,1dfl>k0f,1dfm>k4i,1dfn>k9d,1dfo>kn9,1dfp>lmf,1dfq>lqy,1dfr>lya,1dfs>mem,1dft>mjv,1dfu>mxu,1dfv>ntd,1dfw>ny6,1dfx>nyh,1dfy>nyg,1dfz>nyo,1dg0>nyu,1dg1>nz1,1dg2>o0d,1dg3>o0e,1dg4>o5c,1dg5>o75,1dg6>og0,1dg7>ovo,1dg8>ow9,1dg9>oxt,1dga>p6a,1dgb>pad,1dgc>pnx,1dgd>prt,1dge>prt,1dgf>q53,1dgg>r2o,1dgh>r6e,1dgi>rgh,1dgj>ri1,1dgk>rtf,1dgl>ruw,1dgm>sdy,1dgn>shk,1dgo>tsz,1dgp>u0v,1dgq>u2j,1dgr>j1x,1dgs>36cu,1dgt>pp4,1dgw>ffq,1dgx>g51,1dgy>g2w,1dgz>fpc,1dh0>g1x,1dh1>g3k,1dh2>gcn,1dh3>ge2,1dh4>gwt,1dh5>gut,1dh6>gwp,1dh7>gyq,1dh8>hga,1dh9>hir,1dha>hms,1dhb>hn8,1dhc>huq,1dhd>i08,1dhe>iqa,1dhf>iqh,1dhg>iuh,1dhh>iwd,1dhi>j4o,1dhj>j7y,1dhk>j60,1dhl>j9q,1dhm>j8g,1dhn>jci,1dho>jec,1dhp>jpg,1dhq>jrw,1dhr>jte,1dhs>k0m,1dht>k8k,1dhu>kd3,1dhv>kd7,1dhw>keu,1dhx>l89,1dhy>la2,1dhz>lkx,1di0>lwb,1di1>lvv,1di2>lya,1di3>m5a,1di4>mem,1di5>nmv,1di6>mk5,1di7>mnj,1di8>mqy,1di9>n01,1dia>n46,1dib>n5n,1dic>nbx,1did>nbz,1die>ngq,1dif>nh7,1dig>nhw,1dih>nka,1dii>nk0,1dij>nv0,1dik>o8h,1dil>og0,1dim>ol7,1din>orf,1dio>ovo,1dip>p4u,1diq>pad,1dir>pxu,1dis>q27,1dit>qrd,1diu>r41,1div>r5y,1diw>r6e,1dix>ren,1diy>rg8,1diz>rez,1dj0>rgh,1dj1>rge,1dj2>rfx,1dj3>ri1,1dj4>rka,1dj5>ruw,1dj6>sag,1dj7>sj6,1dj8>srd,1dj9>sxi,1dja>tq4,1djb>tsz,1djc>tw6,1djd>tzv,1dje>u0v,1djf>u17,1djg>u2j,1djh>umq,1dji>vj0,1djj>313e,1djk>3138,1djl>33dh,1djm>brx,1djn>cns,1djo>cop,1djp>39e1,1djq>3bgw,1djr>3i6r,1djs>vgj,1djt>vim,1dkw>2u.2u,1dkx>2u.2x,1dky>2u.30,1dkz>2u.2u.2x,1dl0>2u.2u.30,1dl2>37.38,1dlf>12s.12u,1dlg>12s.12d,1dlh>12s.12j,1dli>132.12u,1dlj>12s.12l,1dls>15u,1dlt>15c,1dlu>15f,1dlv>15g,1dlw>15n,1dlx>15o,1dly>15p,1dlz>160,1dm0>162,1dm1>19.lj,1dm3>1dm2,1dm5>1dm4,1dm7>1dm6,1dm8>1dm6,1dmh>1dlp,1dmx>1dm2,1dn3>15c.15o,1dn4>19t,1dn5>19t,1dn6>1a3,1dn7>1a3,1dn8>1a3,1dn9>1a3,1dna>18p.1cr,1dnb>18p.1cr,1dnc>18p.1cr,1dnd>18p.1cr,1dne>1a8,1dnf>1a8,1dng>1a8,1dnh>1a8,1dni>17u,1dnj>17u,1dnk>17u,1dnl>17u,1dnm>1a7,1dnn>1a7,1dno>1a7,1dnp>1a7,1dnq>18p.179,1dnr>18p.179,1dns>18p.179,1dnt>18p.179,1dnu>1b5.1cr,1dnv>1b5.1cr,1dnw>1b5.1cr,1dnx>1b5.1cr,1dny>1ba,1dnz>1ba,1do0>1ba,1do1>1ba,1do2>1ac,1do3>1ac,1do4>1ac,1do5>1ac,1do6>1ab,1do7>1ab,1do8>1ab,1do9>1ab,1doa>1ae,1dob>1ae,1doc>1ae,1dod>1ae,1doe>1af,1dof>1af,1dog>1af,1doh>1af,1doi>1al,1doj>1al,1dok>1ak,1dol>1ak,1dom>17z.1cr,1don>17z.1cr,1doo>17z.179,1dop>17z.179,1doq>181.1cr,1dor>181.1cr,1dos>181.179,1dot>181.179,1dou>18j,1dov>18j,1dow>18j,1dox>18j,1doy>1bj,1doz>1bj,1dp0>1bj,1dp1>1bj,1dp2>1bn,1dp3>1bn,1dp4>1bn,1dp5>1bn,1dp6>1bl,1dp7>1bl,1dp8>1bl,1dp9>1bl,1dpa>18p,1dpb>18p,1dpc>18p.179,1dpd>18p.179,1dpe>18p.179,1dpf>18p.179,1dpg>1c0,1dph>1c0,1dpi>33,1dpj>33,1dpk>33,1dpl>33,1dpm>33,1dpn>33,1dpo>33,1dpp>33,1dpq>18p,1dpr>18p,1dps>1cj,1dpt>1cj,1dqr>18j.1cr,1dqs>18j.1cr,1dqt>18j.1cr,1dqu>18j.1cr,1dqv>18o.lv,1dqw>18o.lv,1dqx>18o.li,1dqy>18o.li,1dqz>18o.19s,1dr0>18o.19s,1dr1>18o.lv.19w,1dr2>18o.1cr,1dr3>18o.1cr,1dr4>1c5,1dr5>1c5,1dr6>18o.le,1dr7>18o.le,1dr8>1a3,1dr9>1a3,1dra>1a3,1drb>1a3,1drc>18p,1drd>18p,1dre>18p.19w.30,1drf>18p.19w.30,1drg>18p.19w.33,1drh>18p.19w.33,1dri>18p.19w.18o,1drj>18p.19w.18o,1drk>18p.19w.18o.lv,1drl>18p.19w.18o.lv,1drm>18p.19w.18o.li,1drn>18p.19w.18o.li,1dro>18p.19w.18o.19s,1drp>18p.19w.18o.19s,1drq>18p.19w.1a3,1drr>18p.19w.1a3,1drs>18p.19w.1a3,1drt>18p.19w.18p,1dru>18p.19w.18p,1drv>18p.19w.18p,1drw>18p,1drx>18p,1dry>18p,1drz>18p,1ds0>18p.19w.17w,1ds1>18p.19w.17x,1ds2>18p.19w.18l,1ds3>18p.19w.18p,1ds4>18p.19w.18p,1ds5>17s.17w,1ds6>17s.17x,1ds7>17s.17y,1ds8>17s.18l,1ds9>17s.18p,1dsa>17s.18p,1dsb>17u.17w,1dsc>17u.17x,1dsd>17u.17y,1dse>17u.18l,1dsf>17u.18p,1dsg>17u.18p,1dsh>18p.1cr.17w,1dsi>18p.1cr.18l,1dsj>18p.1cr.18p,1dsk>18p.1cr.18p,1dsl>17w.17x,1dsm>17w.18l,1dsn>17x.17w,1dso>17x.18l,1dsp>17y.17w,1dsq>17y.17x,1dsr>17y.18l,1dss>183.17w,1dst>183.17x,1dsu>183.17y,1dsv>183.18l,1dsw>185.17x,1dsx>185.18l,1dsy>186.17w,1dsz>186.17x,1dt0>186.17y,1dt1>186.18l,1dt2>187.17x,1dt3>187.18l,1dt4>188.18l,1dt5>189.17w,1dt6>189.18l,1dt7>18a.17w,1dt8>18a.18l,1dt9>18h.17w,1dta>18h.17x,1dtb>18h.17y,1dtc>18h.18l,1dtd>18h.18p,1dte>18h.18p,1dtf>18i.17x,1dtg>18i.18l,1dth>18i.18p,1dti>18i.18p,1dtj>18j.30,1dtk>18j.17w,1dtl>18j.17x,1dtm>18j.17y,1dtn>18j.18k,1dto>18j.18l,1dtp>18j.18p,1dtq>18j.18p,1dtr>18k.17w,1dts>18k.17x,1dtt>18k.17y,1dtu>18k.18l,1dtv>18k.18p,1dtw>18k.18p,1dtx>18l.17w,1dty>18l.17x,1dtz>18l.17y,1du0>18l.18l,1du1>18l.18p,1du2>18l.18p,1du3>17s.17y,1du4>18m.17x,1du5>18m.17y,1du6>18m.18l,1du7>18m.18p,1du8>18m.18p,1du9>33.17w,1dua>33.18l,1dub>33.18p,1duc>33.18p,1dud>18p.17w,1due>18p.17x,1duf>18p.17y,1dug>18p.18l,1duh>18p.18p,1dui>18p.18p,1duj>180.19s,1duk>181.19s,1dul>18p.19s,1dum>1e9e.18x,1dun>1e9g.18x,1duo>1e9i.18x,1dup>1e9k.18x,1duq>1e9m.18x,1dur>1e9o.19s,1dus>18p.19w.181,1dut>18p.19w.182,1duu>18p.19w.18l,1duv>18p.19w.18m,1duw>18p.19w.18p,1dux>18p.19w.18p,1duy>17s.181,1duz>17s.182,1dv0>17s.18l,1dv1>17s.18m,1dv2>17s.18p,1dv3>17s.18p,1dv4>17u.181,1dv5>17u.182,1dv6>17u.18l,1dv7>17u.18m,1dv8>17u.18p,1dv9>17u.18p,1dva>18p.1cr.181,1dvb>18p.1cr.182,1dvc>18p.1cr.18l,1dvd>18p.1cr.18m,1dve>18p.1cr.18p,1dvf>18p.1cr.18p,1dvg>18h.18p,1dvh>18h.18p,1dvi>18i.18p,1dvj>18i.18p,1dvk>18j.30,1dvl>18j.18k,1dvm>18j.18l,1dvn>18j.18p,1dvo>18j.18p,1dvp>18k.18l,1dvq>18k.18p,1dvr>18k.18p,1dvs>18l.30,1dvt>18l.18l,1dvu>18m.181,1dvv>18m.182,1dvw>18m.18l,1dvx>18m.18m,1dvy>18m.18p,1dvz>18m.18p,1dw0>18p.19s,1dw1>18p.181,1dw2>18p.182,1dw3>18p.18l,1dw4>18p.18m,1dw5>18p.18p,1dw6>18p.18p,1dw7>18p.19w.17w,1dw8>18p.19w.17x,1dw9>18p.19w.17y,1dwa>18p.19w.18l,1dwb>18p.19w.33,1dwc>17s.17w,1dwd>17s.17x,1dwe>17s.17y,1dwf>17s.18l,1dwg>17s.33,1dwh>17u.17w,1dwi>17u.17x,1dwj>17u.17y,1dwk>17u.18l,1dwl>17u.33,1dwm>18p.1cr.18l,1dwn>17w.17x,1dwo>17w.18l,1dwp>17x.17w,1dwq>17x.18l,1dwr>17y.17w,1dws>17y.18l,1dwt>183.17w,1dwu>183.17x,1dwv>183.17y,1dww>183.18l,1dwx>185.17x,1dwy>185.17y,1dwz>185.18l,1dx0>186.17w,1dx1>186.17x,1dx2>186.17y,1dx3>186.18l,1dx4>187.17x,1dx5>188.18l,1dx6>189.17w,1dx7>189.18l,1dx8>18a.17w,1dx9>18a.18l,1dxa>18h.17w,1dxb>18h.17x,1dxc>18h.17y,1dxd>18h.18l,1dxe>18i.17x,1dxf>18i.18l,1dxg>18j.17w,1dxh>18j.17x,1dxi>18j.17y,1dxj>18j.18k,1dxk>18j.18l,1dxl>18k.17w,1dxm>18k.17x,1dxn>18k.17y,1dxo>18k.18l,1dxp>18k.33,1dxq>18l.17w,1dxr>18l.17x,1dxs>18l.17y,1dxt>18l.18l,1dxu>17s.17y,1dxv>18m.17x,1dxw>18m.17y,1dxx>18m.18l,1dxy>18m.33,1dxz>33.17w,1dy0>33.18l,1dy1>33.19s,1dy2>18p.17w,1dy3>18p.17x,1dy4>18p.17y,1dy5>18p.18l,1dy6>18p.33,1dy7>18p.19w.18l,1dy8>18p.19w.33,1dy9>17s.18l,1dya>17s.33,1dyb>17u.18l,1dyc>17u.33,1dyd>18p.1cr.18l,1dye>18p.1cr.33,1dyf>183.18l,1dyg>183.33,1dyh>183.1cr.18l,1dyi>183.1cr.33,1dyj>18j.18k,1dyk>18j.18l,1dyl>18k.18l,1dym>18m.18l,1dyn>18m.33,1dyo>18p.18l,1dyp>18p.33,1dyq>1e9j.18x,1dyr>1e9l.18x,1dys>1e9n.18x,1dyt>187.18p,1dyu>187.18p,1dyv>189.18p,1dyw>189.18p,1dyx>18a.18p,1dyy>18a.18p,1dyz>183.18p,1dz0>183.18p,1dz1>183.1cr.18p,1dz2>183.1cr.18p,1dz3>17x.18p,1dz4>17x.18p,1dz5>17w.18p,1dz6>17w.18p,1dz7>17y.18p,1dz8>17y.18p,1dz9>185.18p,1dza>185.18p,1dzb>186.18p,1dzc>186.18p,1dzd>183.1cr.17w,1dze>183.1cr.17x,1dzf>183.1cr.17y,1dzg>183.1cr.18l,1dzh>183.1cr.181,1dzi>183.181,1dzj>185.181,1dzk>186.181,1dzl>187.18p,1dzm>187.18p,1dzn>189.18p,1dzo>189.18p,1dzp>18a.18p,1dzq>18a.18p,1dzr>183.18p,1dzs>183.18p,1dzt>183.1cr.18p,1dzu>183.1cr.18p,1dzv>17x.18p,1dzw>17x.18p,1dzx>17w.18p,1dzy>17w.18p,1dzz>17y.18p,1e00>17y.18p,1e01>185.18p,1e02>185.18p,1e03>186.18p,1e04>186.18p,1e05>183.1cr.17w,1e06>183.1cr.17x,1e07>183.1cr.17y,1e08>183.1cr.18l,1e09>183.1cr.181,1e0a>183.181,1e0b>185.181,1e0c>186.181,1e0d>183.1cr.17w,1e0e>183.1cr.17x,1e0f>183.1cr.17y,1e0g>183.1cr.18l,1e0h>183.33,1e0i>183.1cr.33,1e0j>187.18l,1e0k>183.17w,1e0l>183.17x,1e0m>183.17y,1e0n>183.1cr.17w,1e0o>183.1cr.17x,1e0p>183.1cr.17y,1e0q>187.18l,1e0r>188.18l,1e0s>30.ln,1e0t>30.ln,1e0u>14,1e0v>15,1e1c>17u.17w.18l,1e1d>17u.17x.17w,1e1e>17u.17x.17w,1e1f>17u.17x.18l,1e1g>17u.17y.18l,1e1h>17u.18l.17w,1e1i>17u.18l.17x,1e1j>17u.18l.17y,1e1k>17w.18l.17x,1e1l>17w.18l.17x,1e1m>17x.18l.18p,1e1n>17x.18l.18p,1e1o>183.17x.17w,1e1p>183.17w.17x,1e1q>183.17w.18p,1e1r>183.18l.17x,1e1s>183.18l.17x,1e1t>183.18l.17w,1e1u>183.18l.18l,1e1v>183.18l.18l,1e1w>185.17x.17x,1e1x>185.17x.17x,1e1y>185.18l.18l,1e1z>183.1cr.17x.18l,1e20>183.1cr.17x.18l,1e21>183.1cr.17w.18p,1e22>183.1cr.18l.17y,1e23>183.1cr.18l.17y,1e24>183.1cr.18l.18l,1e25>183.1cr.18l.18l,1e26>186.17x.18p,1e27>186.17y.18l,1e28>186.17y.18l,1e29>187.18l.17x,1e2a>187.18l.17x,1e2b>187.18l.18l,1e2c>187.18l.18p,1e2d>189.17w.18l,1e2e>189.18l.18l,1e2f>189.18l.18l,1e2g>189.18l.18p,1e2h>18a.18l.18l,1e2i>18a.18l.18p,1e2j>18a.18l.18p,1e2k>18h.17y.18l,1e2l>18h.17y.18l,1e2m>18i.18l.17x,1e2n>18i.18l.18l,1e2o>18k.17x.18l,1e2p>18k.17x.18p,1e2q>18k.17x.18p,1e2r>18k.17w.17w,1e2s>18k.17w.17w,1e2t>18k.17y.18l,1e2u>18k.17y.18l,1e2v>18k.18l.17x,1e2w>18k.18l.17x,1e2x>18l.17x.17w,1e2y>18l.17x.18l,1e2z>18l.17x.18p,1e30>18l.17w.17x,1e31>18l.17w.18l,1e32>18l.17y.17w,1e33>18l.17y.18l,1e36>18l.17w.17y,1e37>33.18l.17w,1e38>33.18l.18l,1e39>18m.17x.18l,1e3a>18m.17x.18p,1e3b>18m.17w.18l,1e3c>18m.17w.18l,1e3d>18m.17w.18p,1e3e>18m.18l.18p,1e3f>18m.18l.18p,1e3g>18p.18l.18l,1e3h>18p.18l.18l,1e3i>17s.17y.18p,1e3j>17u.17w.18p,1e3k>17u.17w.18p,1e3l>17u.17y.18p,1e3m>17u.17y.18p,1e3n>17u.18l.18p,1e3o>17u.18l.18p,1e3p>17w.18l.18p,1e3q>17w.17x.18p,1e3r>17w.18l.18p,1e3s>183.17y.18p,1e3t>185.17x.18p,1e3u>183.1cr.17x.18p,1e3v>186.17x.18p,1e3w>18k.17w.18p,1e3x>18k.18l.18p,1e3y>18p.17x.18p,1e3z>18p.17w.18p,1e40>18p.18l.18p,1e41>18l.18l.18p,1e42>18i.18l.18p,1e43>18m.17x.18p,1e44>18i.18l.17x,1e45>18k.17x.18l,1e46>189.18l.18p,1e47>18j.18l.18p,1e48>18m.17w.17x,1e49>18l.17y.18p,1e4a>18k.17w.18l,1e4b>18j.18l.18l,1e4c>18k.17w.18l,1e4d>18m.17w.17x,1e4e>17w.17x.18p,1e4f>17x.17w.18p,1e4g>18l.17w.18p,1e4h>18h.18l.18p,1e4i>17s.17x.18p,1e4j>18j.18l.18l,1e4k>189.17w.18l,1e4l>185.18l.18l,1e4m>183.17y.18p,1e4n>18m.17w.18p,1e5s>185.18k.18p,1e5t>18i.18k.18p,1e5u>30.18k.18k.18x.19s.33,1e5v>30.18j.17s.181,1e5w>18l.17x.18l.17z,1e5x>185.18k.189.18l,1e5y>181.183.18o.18k,1e5z>189.18k.18p.33,1e60>18o.183.18k.18l,1e61>185.18k.18p,1e62>185.18k.18p.w.30.18k.18k.33.w.189.18k.18p.33.w.18o.183.18k.18l,1e63>17w.18k.w.17w.18k.30.18k.33,1e64>181.18p.30.18k,1e6x>8yf,1e7k>1m,1e7l>7b6,1e7o>6x3,1e7p>730,1e7q>731,1e7r>732,1e7s>733,1e7t>734,1e7u>735,1e89>jt,1e8a>jt,1e8b>jt,1e8c>jt,1e8d>2n,1e8e>2n,1e8f>2n,1e8o>19,1e94>2k,1e9s>17l,1e9t>17m,1e9u>17m,1e9v>30.19w,1e9w>30.19w,1e9x>18o.19w,1e9y>18o.19w,1e9z>30.191,1ea0>30.191,1ea1>18p.19w,1ea2>18p.19w,1ea3>18p.19w,1ea4>18p.19w,1ea5>30,1ea6>30,1ea7>17s,1ea8>17s,1ea9>17s,1eaa>17s,1eab>17t,1eac>17t,1ead>17u,1eae>17u,1eaf>17u,1eag>17u,1eah>18p.1cr,1eai>18p.1cr,1eaj>18p.1cr,1eak>18p.1cr,1eal>17w,1eam>17w,1ean>17w,1eao>17w,1eap>17x,1eaq>17x,1ear>17x,1eas>17x,1eat>17y,1eau>17y,1eav>17y,1eaw>17y,1eax>17z,1eay>17z,1eaz>180,1eb0>180,1eb1>181,1eb2>181,1eb3>182,1eb4>182,1eb5>183,1eb6>183,1eb7>183,1eb8>183,1eb9>183.1cr,1eba>183.1cr,1ebb>183.1cr,1ebc>183.1cr,1ebd>185,1ebe>185,1ebf>185,1ebg>185,1ebh>186,1ebi>186,1ebj>186,1ebk>186,1ebl>187,1ebm>187,1ebn>187,1ebo>187,1ebp>188,1ebq>188,1ebr>188,1ebs>188,1ebt>189,1ebu>189,1ebv>189,1ebw>189,1ebx>18a,1eby>18a,1ebz>18a,1ec0>18a,1ec1>18h,1ec2>18h,1ec3>18h,1ec4>18h,1ec5>18i,1ec6>18i,1ec7>18i,1ec8>18i,1ec9>18j,1eca>18j,1ecb>18j,1ecc>18j,1ecd>18k,1ece>18k,1ecf>18k,1ecg>18k,1ech>18l,1eci>18l,1ecj>18l,1eck>18l,1ecl>18m,1ecm>18m,1ecn>18m,1eco>18m,1ecp>33,1ecq>33,1ecr>33,1ecs>33,1ect>18o,1ecu>18o,1ecv>18p,1ecw>18p,1ecx>18p,1ecy>18p,1ecz>18p,1ed0>18p,1ed1>18k.17m,1ed2>18k.17m,1ed3>18k.30.19w,1ed4>18k.30.19w,1ed5>18k.30.191,1ed6>18k.30.191,1ed7>18k.30,1ed8>18k.30,1edd>x,1ede>13.13,1edj>13,1edp>9oc,1ee2>1m,1ee9>1t,1eea>1u,1eeb>1v,1eed>1x,1eeg>20,1eeh>30,1eei>22,1eej>23,1eel>25,1eem>26,1een>27,1eeo>28,1eer>2b,1ees>2c,1eew>2g,1eex>2h,1eey>2i,1eez>14,1ef0>2k,1ef1>15,1ef2>1e7z,1ef4>13,1ef5>2p,1ef7>2r,1ef9>2t,1efb>2v,1efc>2w,1efd>2x,1efe>2y,1efg>30,1efj>33,1efk>34,1efn>37,1efq>3a,1efs>3c,1eft>3d,1efw>7b6,1efy>9i4,1eg5>53,1ejn>jt,1ejs>30,1ejx>7fu,1erl>53,1evi>26.lm,1evq>2g.mt,1evr>2e.mt,1evs>30.mt.30.mt.2b.mt,1evt>30.mt.30.mt,1ew0>11w,1f2a>1u,1f2d>pg,1f2e>1x,1f2f>1y,1f2i>30,1f2l>g5,1f2o>2g,1f2q>27,1f2s>4ik,1f2t>28,1f2u>2b,1f2v>2c,1f2z>17,1f34>1t,1f35>1u,1f36>1v,1f37>pg,1f39>1y,1f3f>27,1f3h>rc,1f3k>25,1f3l>2c,1f3m>2h,1f3n>py,1f3o>2g,1f3p>q0,1f3q>q1,1f3s>8xs,1f4f>20,1f4x>17z,1f50>18o,1f54>187,1f5e>185,1f5h>2i,1f5t>1u,1f5u>1v,1f61>30,1f69>25,1f6a>rc,1f6d>2c,1f6f>2g,1f6i>1k,1f6n>16,1f6o>30,1f6q>2g,1fbl>1f9e,1fbn>1f9v,1fcx>b4,1fd0>27,1fdd>wl2,1fdh>1v,1fdn>24,1fdr>8s0,1fds>2b,1fdv>au,1fdx>t4,1fe1>x3n,1fe2>ii,1fe4>33,1fel>2r,1fen>hj,1feq>gu,1fer>in,1few>37,1fez>gk,1ff1>5qm,1fhc>1fgm,1fhs>g5,1fhw>2a,1fi4>xv,1fia>27,1fib>ig,1fic>66,1fil>sr,1fim>2d,1fio>4iu,1fip>q0,1fiq>1j,1fiw>i4,1fiz>qj,1fje>33,1fjf>wvd,1fjq>39,1fjt>qw,1fkj>26,1fkm>27,1fko>23,1fks>1v,1fkt>2e,1fl1>1y,1fl2>24,1fl3>2g,1gl6>mb,1gls>1a,1glz>1gly.1gly,1h4q>1h2d,1h4s>1h1e,1hhi>18m,1hhj>1a8,1hhs>4w.mq,1hvf>1v4,1i2v>1v4,1i2y>mb,1i2z>1tm,1i3f>xdo,1i3g>xdn,1i3i>6rs,1ibk>lm,1ij7>1ik4.1iki.1ij6,1ijd>1ik4.1iki.1ijc,1ijo>1ik4.1iki.1ijn,1iju>1ik4.1iki.1ijt,1ijx>1ik4.1iki.1ijw,1ijz>1ik4.1iki.1ijy,1iks>1ikr.1ikr,1imq>1w8,1ims>1wa,1imu>1wc,1imw>1we,1imx>1wf,1imz>1wh,1in1>1wy,1in2>1wk,1in3>1wl,1in4>1wm,1in5>1wn,1in6>1wo,1in7>1wq,1inb>1wu,1inc>1wv,1ind>1ws,1ine>1wj,1inf>1ww,1inh>1x3,1ini>1x4,1ink>1xa,1inl>1xb,1int>1xj,1inw>1xn,1inx>1xz,1iny>1xo,1inz>li.lj,1io1>1vn,1io2>1xp,1io3>mb,1io4>1x9,1io5>3b.lj,1iog>33,1ioh>1yf,1ioi>1yg,1iom>1yk,1ivs>1ite,1ivt>1ite,1ivu>1itf,1ivv>1itg,1ivw>1iuq,1ivx>1iur,1iyq>1iyp.1iyp,1j40>36.32,1j46>3a,1j4a>3b,1j4e>3b,1j4f>3b,1jfk>2e,1jfm>1y,1jfn>24,1jfo>2h,1jfq>1x,1jfs>6pz,1jft>2i,1jfw>1l,1jfy>1x,1jfz>1g,1jg2>24,1jg5>27,1jg7>4ik,1jg8>2d,1jgb>1h,1jgc>2c,1jgg>3a,1jgh>37,1jgi>1y,1jgj>2x,1jgk>3e,1jgm>1j,1jgo>33,1jgq>1f,1jgs>1l,1jgu>x3n,1jh1>1i,1jh2>1l,1jh3>33,1jh4>39,1jh8>3d,1jhc>27,1jhf>36.32,1jhg>19l,1jhh>2i,1jhi>2f,1jhl>1v,1jho>2g,1jhr>2f,1jhu>1v,1jvq>1jvp.1jvz,1jvr>1jvp.1jw0,1jvs>1jvp.1jvp,1jvt>1jvp.1jvp.1jvz,1jvu>1jvp.1jvp.1jw0,1jvw>1jvv.1jvz,1jvx>1jvv.1jvv,1jvy>1jvv.1jvv.1jvz,1jw4>1jw3.1jvz,1jw5>1jw3.1jw0,1jw6>1jw3.1jw3,1jw7>1jw3.1jw3.1jvz,1jw8>1jw3.1jw3.1jw0,1jz4>1tm,1jza>li,1k5e>1k5d.1k5d,1k8i>1k8a,1kgp>1m,1kgq>30,1kgw>27,1kgx>30,1kxk>1fa2,1omx>1ggu,20fa>ps,20fe>30,20fq>2q,20g1>qo,20gh>at,20hz>pf,20i0>2e,20i2>2c,20ie>24,20ii>pg,20ik>wuw,20iu>wl2,20iw>30,20j1>b4,20j9>2a,20je>2b,20jf>1f,20jh>g5,20jj>1q,20jk>1t,20jm>2d,20jn>2h,20k1>13,20k2>13,20oi>g1r,2j12>1t,2j13>1u,2j14>1v,2j15>1w,2j16>1x,2j17>1y,2j18>1z,2j19>20,2j1a>30,2j1b>22,2j1c>23,2j1d>24,2j1e>25,2j1f>26,2j1g>27,2j1h>28,2j1i>29,2j1j>2a,2j1k>2b,2j1l>2c,2j1m>2d,2j1n>2e,2j1o>2f,2j1p>2g,2j1q>2h,2j1r>2i,2j1s>27,2j1t>30,2j1u>1e,2j1v>1f,2j1w>1g,2j1x>1h,2j1y>1i,2j1z>1j,2j20>1k,2j21>1l,2j23>2rco,2jfz>8xu,2jv8>3f,2jxp>1a,2k1u>zi,2k1y>1f,2k23>t4,2k25>2e,2k27>2k,2k2a>1j,2k2b>1y,2k2c>1f3w,2k2d>wl2,2k2e>2a,2k2f>8rz,2k2i>27.mt,2k2j>6kk,2k2k>wk5,2k2p>b4,2k2q>v4,2k2y>24,2k2z>wl2,2k34>x6j,2k3a>1o,2k3b>1q,2k3c>6tr,2k3d>6ts,2k3e>1b,2k3f>2k,2k3j>4i3,2k3p>11k,2kg0>1t,2kg1>1u,2kg2>1v,2kg3>1w,2kg4>1x,2kg5>1y,2kg6>1z,2kg7>20,2kg8>30,2kg9>22,2kga>23,2kgb>24,2kgc>25,2kgd>26,2kge>27,2kgf>28,2kgg>29,2kgh>2a,2kgi>2b,2kgj>2c,2kgk>2d,2kgl>2e,2kgm>2f,2kgn>2g,2kgo>2h,2kgp>2i,2kgq>2p,2kgr>2q,2kgs>2r,2kgt>2s,2kgu>2t,2kgv>2u,2kgw>2v,2kgx>2w,2kgy>2x,2kgz>2y,2kh0>2z,2kh1>30,2kh2>36.32,2kh3>32,2kh4>33,2kh5>34,2kh6>35,2kh7>36,2kh8>37,2kh9>38,2kha>39,2khb>3a,2khc>3b,2khd>3c,2khe>3d,2khf>3e,2khg>1t,2khh>1u,2khi>1v,2khj>1w,2khk>1x,2khl>1y,2khm>1z,2khn>20,2kho>30,2khp>22,2khq>23,2khr>24,2khs>25,2kht>26,2khu>27,2khv>28,2khw>29,2khx>2a,2khy>2b,2khz>2c,2ki0>2d,2ki1>2e,2ki2>2f,2ki3>2g,2ki4>2h,2ki5>2i,2ki6>2p,2ki7>2q,2ki8>2r,2ki9>2s,2kia>2t,2kib>2u,2kic>2v,2kie>2x,2kif>2y,2kig>2z,2kih>30,2kii>36.32,2kij>32,2kik>33,2kil>34,2kim>35,2kin>36,2kio>37,2kip>38,2kiq>39,2kir>3a,2kis>3b,2kit>3c,2kiu>3d,2kiv>3e,2kiw>1t,2kix>1u,2kiy>1v,2kiz>1w,2kj0>1x,2kj1>1y,2kj2>1z,2kj3>20,2kj4>30,2kj5>22,2kj6>23,2kj7>24,2kj8>25,2kj9>26,2kja>27,2kjb>28,2kjc>29,2kjd>2a,2kje>2b,2kjf>2c,2kjg>2d,2kjh>2e,2kji>2f,2kjj>2g,2kjk>2h,2kjl>2i,2kjm>2p,2kjn>2q,2kjo>2r,2kjp>2s,2kjq>2t,2kjr>2u,2kjs>2v,2kjt>2w,2kju>2x,2kjv>2y,2kjw>2z,2kjx>30,2kjy>36.32,2kjz>32,2kk0>33,2kk1>34,2kk2>35,2kk3>36,2kk4>37,2kk5>38,2kk6>39,2kk7>3a,2kk8>3b,2kk9>3c,2kka>3d,2kkb>3e,2kkc>1t,2kke>1v,2kkf>1w,2kki>1z,2kkl>22,2kkm>23,2kkp>26,2kkq>27,2kkr>28,2kks>29,2kku>2b,2kkv>2c,2kkw>2d,2kkx>2e,2kky>2f,2kkz>2g,2kl0>2h,2kl1>2i,2kl2>2p,2kl3>2q,2kl4>2r,2kl5>2s,2kl7>2u,2kl9>2w,2kla>2x,2klb>2y,2klc>2z,2kld>30,2kle>36.32,2klf>32,2klh>34,2kli>35,2klj>36,2klk>37,2kll>38,2klm>39,2kln>3a,2klo>3b,2klp>3c,2klq>3d,2klr>3e,2kls>1t,2klt>1u,2klu>1v,2klv>1w,2klw>1x,2klx>1y,2kly>1z,2klz>20,2km0>30,2km1>22,2km2>23,2km3>24,2km4>25,2km5>26,2km6>27,2km7>28,2km8>29,2km9>2a,2kma>2b,2kmb>2c,2kmc>2d,2kmd>2e,2kme>2f,2kmf>2g,2kmg>2h,2kmh>2i,2kmi>2p,2kmj>2q,2kmk>2r,2kml>2s,2kmm>2t,2kmn>2u,2kmo>2v,2kmp>2w,2kmq>2x,2kmr>2y,2kms>2z,2kmt>30,2kmu>36.32,2kmv>32,2kmw>33,2kmx>34,2kmy>35,2kmz>36,2kn0>37,2kn1>38,2kn2>39,2kn3>3a,2kn4>3b,2kn5>3c,2kn6>3d,2kn7>3e,2kn8>1t,2kn9>1u,2knb>1w,2knc>1x,2knd>1y,2kne>1z,2knh>22,2kni>23,2knj>24,2knk>25,2knl>26,2knm>27,2knn>28,2kno>29,2knq>2b,2knr>2c,2kns>2d,2knt>2e,2knu>2f,2knv>2g,2knw>2h,2kny>2p,2knz>2q,2ko0>2r,2ko1>2s,2ko2>2t,2ko3>2u,2ko4>2v,2ko5>2w,2ko6>2x,2ko7>2y,2ko8>2z,2ko9>30,2koa>36.32,2kob>32,2koc>33,2kod>34,2koe>35,2kof>36,2kog>37,2koh>38,2koi>39,2koj>3a,2kok>3b,2kol>3c,2kom>3d,2kon>3e,2koo>1t,2kop>1u,2kor>1w,2kos>1x,2kot>1y,2kou>1z,2kow>30,2kox>22,2koy>23,2koz>24,2kp0>25,2kp2>27,2kp6>2b,2kp7>2c,2kp8>2d,2kp9>2e,2kpa>2f,2kpb>2g,2kpc>2h,2kpe>2p,2kpf>2q,2kpg>2r,2kph>2s,2kpi>2t,2kpj>2u,2kpk>2v,2kpl>2w,2kpm>2x,2kpn>2y,2kpo>2z,2kpp>30,2kpq>36.32,2kpr>32,2kps>33,2kpt>34,2kpu>35,2kpv>36,2kpw>37,2kpx>38,2kpy>39,2kpz>3a,2kq0>3b,2kq1>3c,2kq2>3d,2kq3>3e,2kq4>1t,2kq5>1u,2kq6>1v,2kq7>1w,2kq8>1x,2kq9>1y,2kqa>1z,2kqb>20,2kqc>30,2kqd>22,2kqe>23,2kqf>24,2kqg>25,2kqh>26,2kqi>27,2kqj>28,2kqk>29,2kql>2a,2kqm>2b,2kqn>2c,2kqo>2d,2kqp>2e,2kqq>2f,2kqr>2g,2kqs>2h,2kqt>2i,2kqu>2p,2kqv>2q,2kqw>2r,2kqx>2s,2kqy>2t,2kqz>2u,2kr0>2v,2kr1>2w,2kr2>2x,2kr3>2y,2kr4>2z,2kr5>30,2kr6>36.32,2kr7>32,2kr8>33,2kr9>34,2kra>35,2krb>36,2krc>37,2krd>38,2kre>39,2krf>3a,2krg>3b,2krh>3c,2kri>3d,2krj>3e,2krk>1t,2krl>1u,2krm>1v,2krn>1w,2kro>1x,2krp>1y,2krq>1z,2krr>20,2krs>30,2krt>22,2kru>23,2krv>24,2krw>25,2krx>26,2kry>27,2krz>28,2ks0>29,2ks1>2a,2ks2>2b,2ks3>2c,2ks4>2d,2ks5>2e,2ks6>2f,2ks7>2g,2ks8>2h,2ks9>2i,2ksa>2p,2ksb>2q,2ksc>2r,2ksd>2s,2kse>2t,2ksf>2u,2ksg>2v,2ksh>2w,2ksi>2x,2ksj>2y,2ksk>2z,2ksl>30,2ksm>36.32,2ksn>32,2kso>33,2ksp>34,2ksq>35,2ksr>36,2kss>37,2kst>38,2ksu>39,2ksv>3a,2ksw>3b,2ksx>3c,2ksy>3d,2ksz>3e,2kt0>1t,2kt1>1u,2kt2>1v,2kt3>1w,2kt4>1x,2kt5>1y,2kt6>1z,2kt7>20,2kt8>30,2kt9>22,2kta>23,2ktb>24,2ktc>25,2ktd>26,2kte>27,2ktf>28,2ktg>29,2kth>2a,2kti>2b,2ktj>2c,2ktk>2d,2ktl>2e,2ktm>2f,2ktn>2g,2kto>2h,2ktp>2i,2ktq>2p,2ktr>2q,2kts>2r,2ktt>2s,2ktu>2t,2ktv>2u,2ktw>2v,2ktx>2w,2kty>2x,2ktz>2y,2ku0>2z,2ku1>30,2ku2>36.32,2ku3>32,2ku4>33,2ku5>34,2ku6>35,2ku7>36,2ku8>37,2ku9>38,2kua>39,2kub>3a,2kuc>3b,2kud>3c,2kue>3d,2kuf>3e,2kug>1t,2kuh>1u,2kui>1v,2kuj>1w,2kuk>1x,2kul>1y,2kum>1z,2kun>20,2kuo>30,2kup>22,2kuq>23,2kur>24,2kus>25,2kut>26,2kuu>27,2kuv>28,2kuw>29,2kux>2a,2kuy>2b,2kuz>2c,2kv0>2d,2kv1>2e,2kv2>2f,2kv3>2g,2kv4>2h,2kv5>2i,2kv6>2p,2kv7>2q,2kv8>2r,2kv9>2s,2kva>2t,2kvb>2u,2kvc>2v,2kvd>2w,2kve>2x,2kvf>2y,2kvg>2z,2kvh>30,2kvi>36.32,2kvj>32,2kvk>33,2kvl>34,2kvm>35,2kvn>36,2kvo>37,2kvp>38,2kvq>39,2kvr>3a,2kvs>3b,2kvt>3c,2kvu>3d,2kvv>3e,2kvw>1t,2kvx>1u,2kvy>1v,2kvz>1w,2kw0>1x,2kw1>1y,2kw2>1z,2kw3>20,2kw4>30,2kw5>22,2kw6>23,2kw7>24,2kw8>25,2kw9>26,2kwa>27,2kwb>28,2kwc>29,2kwd>2a,2kwe>2b,2kwf>2c,2kwg>2d,2kwh>2e,2kwi>2f,2kwj>2g,2kwk>2h,2kwl>2i,2kwm>2p,2kwn>2q,2kwo>2r,2kwp>2s,2kwq>2t,2kwr>2u,2kws>2v,2kwt>2w,2kwu>2x,2kwv>2y,2kww>2z,2kwx>30,2kwy>36.32,2kwz>32,2kx0>33,2kx1>34,2kx2>35,2kx3>36,2kx4>37,2kx5>38,2kx6>39,2kx7>3a,2kx8>3b,2kx9>3c,2kxa>3d,2kxb>3e,2kxc>1t,2kxd>1u,2kxe>1v,2kxf>1w,2kxg>1x,2kxh>1y,2kxi>1z,2kxj>20,2kxk>30,2kxl>22,2kxm>23,2kxn>24,2kxo>25,2kxp>26,2kxq>27,2kxr>28,2kxs>29,2kxt>2a,2kxu>2b,2kxv>2c,2kxw>2d,2kxx>2e,2kxy>2f,2kxz>2g,2ky0>2h,2ky1>2i,2ky2>2p,2ky3>2q,2ky4>2r,2ky5>2s,2ky6>2t,2ky7>2u,2ky8>2v,2ky9>2w,2kya>2x,2kyb>2y,2kyc>2z,2kyd>30,2kye>36.32,2kyf>32,2kyg>33,2kyh>34,2kyi>35,2kyj>36,2kyk>37,2kyl>38,2kym>39,2kyn>3a,2kyo>3b,2kyp>3c,2kyq>3d,2kyr>3e,2kys>2x,2kyt>fr,2kyw>1t,2kyx>1u,2kyy>pf,2kyz>pg,2kz0>1x,2kz1>2i,2kz2>20,2kz3>27.mt,2kz4>30,2kz5>23,2kz6>g5,2kz7>25,2kz8>26,2kz9>pq,2kza>27,2kzb>ps,2kzc>28,2kzd>27.mt,2kze>bt,2kzf>2c,2kzg>2h,2kzh>py,2kzi>2g,2kzj>q0,2kzk>q1,2kzl>6pz,2kzm>2p,2kzn>67,2kzo>3d,2kzp>61r,2kzq>x3n,2kzr>qe,2kzs>32.mh,2kzt>27.mt,2kzu>2x,2kzv>8o,2kzw>qj,2kzx>qk,2kzy>3a,2kzz>qm,2l00>33,2l01>qo,2l02>34,2l03>qq,2l04>33,2l05>5qz,2l06>39,2l07>hk,2l08>qv,2l09>qw,2l0a>qx,2l0b>6pu,2l0c>x3n,2l0d>27.mt,2l0e>8o,2l0f>hk,2l0g>34,2l0h>qo,2l0i>1t,2l0j>1u,2l0k>pf,2l0l>pg,2l0m>1x,2l0n>2i,2l0o>20,2l0p>27.mt,2l0q>30,2l0r>23,2l0s>g5,2l0t>25,2l0u>26,2l0v>pq,2l0w>27,2l0x>ps,2l0y>28,2l0z>27.mt,2l10>bt,2l11>2c,2l12>2h,2l13>py,2l14>2g,2l15>q0,2l16>q1,2l17>6pz,2l18>2p,2l19>67,2l1a>3d,2l1b>61r,2l1c>x3n,2l1d>qe,2l1e>32.mh,2l1f>27.mt,2l1g>2x,2l1h>8o,2l1i>qj,2l1j>qk,2l1k>3a,2l1l>qm,2l1m>33,2l1n>qo,2l1o>34,2l1p>qq,2l1q>33,2l1r>5qz,2l1s>39,2l1t>hk,2l1u>qv,2l1v>qw,2l1w>qx,2l1x>6pu,2l1y>x3n,2l1z>27.mt,2l20>8o,2l21>hk,2l22>34,2l23>qo,2l24>1t,2l25>1u,2l26>pf,2l27>pg,2l28>1x,2l29>2i,2l2a>20,2l2b>27.mt,2l2c>30,2l2d>23,2l2e>g5,2l2f>25,2l2g>26,2l2h>pq,2l2i>27,2l2j>ps,2l2k>28,2l2l>27.mt,2l2m>bt,2l2n>2c,2l2o>2h,2l2p>py,2l2q>2g,2l2r>q0,2l2s>q1,2l2t>6pz,2l2u>2p,2l2v>67,2l2w>3d,2l2x>61r,2l2y>x3n,2l2z>qe,2l30>32.mh,2l31>27.mt,2l32>2x,2l33>8o,2l34>qj,2l35>qk,2l36>3a,2l37>qm,2l38>33,2l39>qo,2l3a>34,2l3b>qq,2l3c>33,2l3d>5qz,2l3e>39,2l3f>hk,2l3g>qv,2l3h>qw,2l3i>qx,2l3j>6pu,2l3k>x3n,2l3l>27.mt,2l3m>8o,2l3n>hk,2l3o>34,2l3p>qo,2l3q>1t,2l3r>1u,2l3s>pf,2l3t>pg,2l3u>1x,2l3v>2i,2l3w>20,2l3x>27.mt,2l3y>30,2l3z>23,2l40>g5,2l41>25,2l42>26,2l43>pq,2l44>27,2l45>ps,2l46>28,2l47>27.mt,2l48>bt,2l49>2c,2l4a>2h,2l4b>py,2l4c>2g,2l4d>q0,2l4e>q1,2l4f>6pz,2l4g>2p,2l4h>67,2l4i>3d,2l4j>61r,2l4k>x3n,2l4l>qe,2l4m>32.mh,2l4n>27.mt,2l4o>2x,2l4p>8o,2l4q>qj,2l4r>qk,2l4s>3a,2l4t>qm,2l4u>33,2l4v>qo,2l4w>34,2l4x>qq,2l4y>33,2l4z>5qz,2l50>39,2l51>hk,2l52>qv,2l53>qw,2l54>qx,2l55>6pu,2l56>x3n,2l57>27.mt,2l58>8o,2l59>hk,2l5a>34,2l5b>qo,2l5c>1t,2l5d>1u,2l5e>pf,2l5f>pg,2l5g>1x,2l5h>2i,2l5i>20,2l5j>27.mt,2l5k>30,2l5l>23,2l5m>g5,2l5n>25,2l5o>26,2l5p>pq,2l5q>27,2l5r>ps,2l5s>28,2l5t>27.mt,2l5u>bt,2l5v>2c,2l5w>2h,2l5x>py,2l5y>2g,2l5z>q0,2l60>q1,2l61>6pz,2l62>2p,2l63>67,2l64>3d,2l65>61r,2l66>x3n,2l67>qe,2l68>32.mh,2l69>27.mt,2l6a>2x,2l6b>8o,2l6c>qj,2l6d>qk,2l6e>3a,2l6f>qm,2l6g>33,2l6h>qo,2l6i>34,2l6j>qq,2l6k>33,2l6l>5qz,2l6m>39,2l6n>hk,2l6o>qv,2l6p>qw,2l6q>qx,2l6r>6pu,2l6s>x3n,2l6t>27.mt,2l6u>8o,2l6v>hk,2l6w>34,2l6x>qo,2l6y>1y,2l6z>rh,2l72>27,2l73>30,2l74>1e,2l75>1f,2l76>1g,2l77>1h,2l78>1i,2l79>1j,2l7a>1k,2l7b>1l,2l7c>27,2l7d>30,2l7e>1e,2l7f>1f,2l7g>1g,2l7h>1h,2l7i>1i,2l7j>1j,2l7k>1k,2l7l>1l,2l7m>27,2l7n>30,2l7o>1e,2l7p>1f,2l7q>1g,2l7r>1h,2l7s>1i,2l7t>1j,2l7u>1k,2l7v>1l,2l7w>27,2l7x>30,2l7y>1e,2l7z>1f,2l80>1g,2l81>1h,2l82>1i,2l83>1j,2l84>1k,2l85>1l,2l86>27,2l87>30,2l88>1e,2l89>1f,2l8a>1g,2l8b>1h,2l8c>1i,2l8d>1j,2l8e>1k,2l8f>1l,2o6h>17,2o6m>5ag,2ojr>30,2ojs>6qo,2ojt>19f,2ojv>1k,2ojw>6pu,2ojx>6pu.mt,2pkw>30,2pkx>17s,2pky>17w,2pkz>17z,2pl1>18o,2pl2>182,2pl3>17x,2pl4>187,2pl5>18p,2pl6>18j,2pl7>18k,2pl8>18l,2pl9>18m,2pla>183,2plb>189,2plc>18h,2pld>185,2ple>18i,2plf>181,2plg>183.1cr,2plh>17u,2pli>18p.1cr,2plj>17y,2plk>180,2pll>186,2plm>188,2pln>18a,2plo>18p,2plp>18p,2plq>1b5,2plr>1b5,2plt>17s,2plu>17w,2plw>33,2plz>17x,2pm1>18p,2pm2>18j,2pm3>18k,2pm4>18l,2pm5>18m,2pm6>183,2pm7>189,2pm8>18h,2pm9>185,2pma>18i,2pmc>183.1cr,2pmd>17u,2pme>18p.1cr,2pmf>17y,2pmh>186,2pmj>18a,2pmq>17w,2pmv>17x,2pmx>18p,2pmz>18k,2pn1>18m,2pn2>183,2pn3>189,2pn5>185,2pn6>18i,2pn8>183.1cr,2pnb>17y,2pnd>186,2pnf>18a,2pnh>18p,2pnj>1b5,2pnl>17s,2pnm>17w,2pno>33,2pnr>17x,2pns>187,2pnt>18p,2pnu>18j,2pnw>18l,2pnx>18m,2pny>183,2pnz>189,2po0>18h,2po1>185,2po2>18i,2po4>183.1cr,2po5>17u,2po6>18p.1cr,2po7>17y,2po9>186,2poa>188,2pob>18a,2poc>18p,2poe>1b5,2pog>30,2poh>17s,2poi>17w,2poj>17z,2pok>33,2pol>18o,2pom>182,2pon>17x,2poo>187,2pop>18p,2por>18k,2pos>18l,2pot>18m,2pou>183,2pov>189,2pow>18h,2pox>185,2poy>18i,2poz>181,2pp0>183.1cr,2pp1>17u,2pp2>18p.1cr,2pp3>17y,2pp4>180,2pp5>186,2pp6>188,2pp7>18a,2ppd>17s,2ppe>17w,2ppf>17z,2pph>18o,2ppi>182,2ppj>17x,2ppk>187,2ppl>18p,2ppn>18k,2ppo>18l,2ppp>18m,2ppq>183,2ppr>189,2pps>18h,2ppt>185,2ppu>18i,2ppv>181,2ppw>183.1cr,2ppx>17u,2ppy>18p.1cr,2ppz>17y,2pq0>180,2pq1>186,2pq2>188,2pq3>18a,2q68>27.1a,2q69>27.18,2q6a>30.18,2q6b>1e.18,2q6c>1f.18,2q6d>1g.18,2q6e>1h.18,2q6f>1i.18,2q6g>1j.18,2q6h>1k.18,2q6i>1l.18,2q6n>10.6hs,2q6o>14.1t.15,2q6p>14.1u.15,2q6q>14.1v.15,2q6r>14.1w.15,2q6s>14.1x.15,2q6t>14.1y.15,2q6u>14.1z.15,2q6v>14.20.15,2q6w>14.30.15,2q6x>14.22.15,2q6y>14.23.15,2q6z>14.24.15,2q70>14.25.15,2q71>14.26.15,2q72>14.27.15,2q73>14.28.15,2q74>14.29.15,2q75>14.2a.15,2q76>14.2b.15,2q77>14.2c.15,2q78>14.2d.15,2q79>14.2e.15,2q7a>14.2f.15,2q7b>14.2g.15,2q7c>14.2h.15,2q7d>14.2i.15,2q7e>14.2b.15,2q99>a84.9.6hp,2q9a>1v.6hs,2qf4>14.kdo.15,2qf5>14.fex.15,2qf6>14.fik.15,2qf7>14.i2x.15,2qf8>14.m9l.15,2qf9>14.jf7.15,2qfa>14.nh3.15,2qfb>14.gd9.15,2qfc>14.k0n.15,2qky>7jx,2ql4>7jy,2ql5>7jx,2qlv>2jek,2qmm>2jel,2qmn>2jel,2qmq>2jem,2qmr>2jen,2qnr>2jei,2qqq>2jej,2qrx>2j22,2qtf>2j24,2qz8>2sca,2rcw>29.1x,2rcx>wuw,2rcy>pg,2rd0>1f3w,2rd3>1t.2a,2rd4>2e.5wk,2rd6>7jd,2rdg>27.mt,2re0>1f3c,2rei>89r,2rf0>1v,2rf8>4ik,2rf9>6u9,2rfg>37.37.37,2rfi>6rz,2rfs>2c,2rfv>25.1u,2rfw>2e.1u,2rg1>6u8,2sc0>27,2sc1>30,2sc2>1e,2sc3>1f,2sc4>1g,2sc5>1h,2sc6>1i,2sc7>1j,2sc8>1k,2sc9>1l,2ues>g6t,2xbn>hkn,2xdz>hlm,2xlz>2xm0,2zfs>7sc,30g5>ivu,358g>lmt,37jx>mud,395m>395l,3b2s>rvf,3d7h>3d7s,3eo6>3eie,3rnp>37dg,3tbu>ibk,3tby>33a7,3yht>ggh,464g>fgd,464h>fg8,464i>fgh,464j>2tcy,464k>fog,464l>fqm,464m>fqz,464n>fp1,464o>fwa,464p>fx5,464q>fzb,464r>fyn,464s>ae6,464t>2ud6,464u>g25,464v>g2c,464w>g2s,464x>g3b,464y>2u58,464z>aex,4650>g2v,4651>g3x,4652>2u6j,4653>g47,4654>g4k,4655>fkc,4656>g4s,4657>g51,4658>3ly7,4659>g6t,465a>g77,465b>afz,465c>g8r,465d>g92,465e>gaa,465f>gaf,465g>ahh,465h>gcn,465i>gcp,465j>gdg,465k>ge2,465l>ged,465m>gee,465n>gev,465o>gg9,465p>ggh,465q>ggq,465r>ghf,465s>ghp,465t>ghr,465u>ghr,465v>ghr,465w>2v58,465x>m7k,465y>gju,465z>gkf,4660>2vdv,4661>gkr,4662>gkx,4663>gli,4664>gpq,4665>gmw,4666>gnc,4667>go8,4668>gpu,4669>gs6,466a>gsw,466b>gur,466c>gv7,466d>gw4,466e>gw4,466f>gwp,466g>gx7,466h>gxf,466i>gxu,466j>h7a,466k>gzq,466l>h7b,466m>h1t,466n>h2s,466o>g7b,466p>hke,466q>hce,466r>hdg,466s>he5,466t>haj,466u>hf6,466v>hf5,466w>hik,466x>2x9g,466y>hki,466z>hkn,4670>hl2,4671>hlm,4672>hlu,4673>hnm,4674>2xm0,4675>2xnu,4676>hrg,4677>hsr,4678>ht3,4679>hqw,467a>huu,467b>aum,467c>av0,467d>hzc,467e>i0u,467f>i0u,467g>2y88,467h>i4j,467i>i54,467j>i5j,467k>i5v,467l>2yhk,467m>i67,467n>i6e,467o>itv,467p>i76,467q>ayp,467r>i8w,467s>i9a,467t>ibk,467u>ia5,467v>2z1g,467w>if7,467x>2z1i,467y>ige,467z>igb,4680>igs,4681>ijl,4682>ijm,4683>b3j,4684>ikd,4685>ilk,4686>im5,4687>ind,4688>b4y,4689>2zr7,468a>b5o,468b>ipc,468c>ipf,468d>ipi,468e>iq2,468f>3pg2,468g>iri,468h>3035,468i>3035,468j>poh,468k>isi,468l>isi,468m>b7r,468n>335k,468o>3cgq,468p>iua,468q>iuj,468r>b8j,468s>ivu,468t>ix9,468u>ixj,468v>iyh,468w>j29,468x>bay,468y>ba4,468z>j2s,4690>30t0,4691>j47,4692>j7s,4693>j7w,4694>j7y,4695>j7w,4696>j96,4697>j9q,4698>jaq,4699>jac,469a>jan,469b>jby,469c>jci,469d>jcm,469e>jdc,469f>jdn,469g>jfh,469h>jht,469i>jis,469j>jm8,469k>31n0,469l>jlp,469m>jjw,469n>jmw,469o>jnn,469p>jqc,469q>31td,469r>js2,469s>jph,469t>jop,469u>bhq,469v>ju1,469w>jum,469x>jvh,469y>juf,469z>bjg,46a0>k0f,46a1>k18,46a2>32mi,46a3>k4j,46a4>kc8,46a5>k7d,46a6>bo9,46a7>k9d,46a8>bns,46a9>bms,46aa>g42,46ab>g45,46ac>kcg,46ad>k9o,46ae>pf1,46af>deh,46ag>kd3,46ah>kd7,46ai>kdd,46aj>kf2,46ak>ker,46al>33cz,46am>bpl,46an>kje,46ao>kg5,46ap>klu,46aq>kn9,46ar>33hp,46as>kni,46at>kkf,46au>kr8,46av>brx,46aw>ksi,46ax>kv7,46ay>kx6,46az>l2g,46b0>33xf,46b1>l3v,46b2>bvc,46b3>l5t,46b4>34br,46b5>l78,46b6>bwu,46b7>l82,46b8>l9b,46b9>la2,46ba>la3,46bb>34p9,46bc>2yvf,46bd>34sa,46be>le6,46bf>354s,46bg>lhb,46bh>lhp,46bi>lev,46bj>ljq,46bk>lku,46bl>lmf,46bm>lkx,46bn>lm1,46bo>lmg,46bp>lmt,46bq>357i,46br>lkk,46bs>lrj,46bt>lta,46bu>c37,46bv>lvv,46bw>lvr,46bx>35jl,46by>lq1,46bz>m0e,46c0>35ni,46c1>35ou,46c2>m2u,46c3>m61,46c4>m5a,46c5>m57,46c6>c5y,46c7>m6i,46c8>m7x,46c9>m7r,46ca>m99,46cb>2u5h,46cc>mdh,46cd>368z,46ce>mfw,46cf>36i3,46cg>mjs,46ch>mk5,46ci>mkw,46cj>36yw,46ck>mm8,46cl>mmt,46cm>3779,46cn>37dg,46co>mt6,46cp>mtn,46cq>cdo,46cr>mud,46cs>ce0,46ct>ce0,46cu>myv,46cv>mzg,46cw>n01,46cx>n0l,46cy>n2i,46cz>cgr,46d0>n50,46d1>386u,46d2>n5q,46d3>389e,46d4>n74,46d5>2zrz,46d6>nbk,46d7>38v5,46d8>38vs,46d9>38zo,46da>cn0,46db>cnc,46dc>nhw,46dd>394j,46de>394i,46df>395l,46dg>396b,46dh>nj2,46di>nj3,46dj>nj3,46dk>nka,46dl>cop,46dm>nm3,46dn>cp2,46do>cra,46dp>39r1,46dq>nri,46dr>nt8,46ds>nv0,46dt>ctf,46du>3a5i,46dv>nyu,46dw>3a8q,46dx>3a9x,46dy>o0f,46dz>o2z,46e0>cvj,46e1>o5c,46e2>o5m,46e3>o5r,46e4>3at8,46e5>3b1j,46e6>3b1j,46e7>oa6,46e8>d1e,46e9>3b8r,46ea>og6,46eb>og9,46ec>d2f,46ed>3beo,46ee>onm,46ef>d5s,46eg>oo8,46eh>oo3,46ei>oow,46ej>3c06,46ek>orn,46el>d8h,46em>ouf,46en>ow2,46eo>oxx,46ep>d9w,46eq>3ciw,46er>3cjr,46es>dax,46et>3cnt,46eu>p6i,46ev>3cqm,46ew>p79,46ex>pa2,46ey>pad,46ez>3d22,46f0>3d43,46f1>pcw,46f2>3d7s,46f3>pdc,46f4>33a7,46f5>ded,46f6>pf6,46f7>phf,46f8>dfv,46f9>pj2,46fa>hx1,46fb>3dlz,46fc>3dmd,46fd>33bn,46fe>33bw,46ff>poh,46fg>pok,46fh>sda,46fi>dij,46fj>psh,46fk>psb,46fl>pst,46fm>gc3,46fn>ptd,46fo>ptf,46fp>ptp,46fq>puu,46fr>3ebg,46fs>put,46ft>pwd,46fu>pyb,46fv>q0d,46fw>pwj,46fx>q0t,46fy>q1z,46fz>q53,46g0>pxv,46g1>q16,46g2>q18,46g3>q1o,46g4>3eie,46g5>3eqz,46g6>3emt,46g7>dnv,46g8>q9d,46g9>q9f,46ga>qae,46gb>3g0a,46gc>qck,46gd>3f3g,46ge>dp9,46gf>dpd,46gg>3f75,46gh>3ff6,46gi>dpn,46gj>qj4,46gk>qjg,46gl>qjr,46gm>qjt,46gn>qll,46go>qko,46gp>qoe,46gq>qn6,46gr>qrd,46gs>qp4,46gt>qqz,46gu>qrq,46gv>dsn,46gw>qu9,46gx>qv5,46gy>dtl,46gz>qxs,46h0>qxv,46h1>3giv,46h2>r13,46h3>r1a,46h4>dv9,46h5>r22,46h6>aez,46h7>3gz2,46h8>3h46,46h9>dz2,46ha>dzb,46hb>rds,46hc>rfx,46hd>rka,46he>rpx,46hf>3hrc,46hg>rsb,46hh>rsx,46hi>rvf,46hj>rxz,46hk>3i9b,46hl>2upw,46hm>s0b,46hn>rzw,46ho>s1c,46hp>2uvy,46hq>s7o,46hr>sag,46hs>3jki,46ht>3jl9,46hu>sk4,46hv>smp,46hw>snl,46hx>3ju6,46hy>snv,46hz>svs,46i0>t07,46i1>t08,46i2>sxo,46i3>t89,46i4>t91,46i5>3ksa,46i6>tjf,46i7>ej9,46i8>tkn,46i9>3l2v,46ia>eli,46ib>ts3,46ic>iia,46id>tur,46ie>3ltx,46if>3lzu,46ig>epa,46ih>epi,46ii>u00,46ij>3mdm,46ik>er6,46il>3mhi,46im>u17,46in>u17,46io>u21,46ip>3mpi,46iq>u76,46ir>eur,46is>u95,46it>ucn,46iu>ude,46iv>uf2,46iw>ez2,46ix>3nsg,46iy>umq,46iz>uv4,46j0>v0d,46j1>f66,46j2>f71,46j3>v3b,46j4>3owe,46j5>f7c,46j6>3oxx,46j7>3p5a,46j8>3p8x,46j9>vcr,46ja>f9y,46jb>veh,46jc>vem,46jd>vet,46je>vf3,46jf>vfa,46jg>vgb,46jh>3pxc,4dq4>ouf";
+
+        const MAP = new Map();
+        CONFUSABLES_RAW.split(",").forEach(function (e) {
+          const p = e.split(">");
+          MAP.set(
+            String.fromCodePoint(parseInt(p[0], 36)),
+            p[1]
+              .split(".")
+              .map(function (x) {
+                return String.fromCodePoint(parseInt(x, 36));
+              })
+              .join(""),
+          );
+        });
+
+        /* A "look-alike character" = non-ASCII char whose prototype is plain ASCII
+           (a letter/digit, or a punctuation lookalike such as U+2024 → "."). Mappings from
+           ASCII sources (m→rn, 1→l, 0→O) are used for skeleton comparison only. CJK
+           ideographs/kana that map to symbols are not reported. */
+        const isSwap = function (c) {
+          if (c.codePointAt(0) < 128 || !MAP.has(c)) return false;
+          const t = MAP.get(c);
+          if (!/^[\x00-\x7F]+$/.test(t)) return false;
+          return /[A-Za-z0-9]/.test(t) || /[\p{P}\p{S}\p{Z}]/u.test(c);
+        };
+
+        /* UTS #39 skeleton: NFD → map each char to its prototype → NFD */
+        function skeleton(str) {
+          let out = "";
+          for (const ch of str.normalize("NFD")) {
+            out += MAP.has(ch) ? MAP.get(ch) : ch;
+          }
+          return out.normalize("NFD");
+        }
+        const fold = function (s) {
+          return skeleton(s)
+            .toLowerCase()
+            .replace(/\p{M}/gu, "")
+            .replace(/0/g, "o")
+            .replace(/5/g, "s");
+        };
+
+        const BRANDS = [
+          "google", "paypal", "apple", "microsoft", "amazon", "facebook",
+          "instagram", "netflix", "github", "linkedin", "twitter", "whatsapp",
+          "dropbox", "chase", "wellsfargo", "bankofamerica", "coinbase",
+          "binance", "ebay", "yahoo", "outlook", "steam", "spotify", "adobe",
+          "telegram", "icloud",
+        ];
+        const BRAND_FOLD = BRANDS.map(function (b) {
+          return [b, fold(b)];
+        });
+
+        const SCRIPTS = [
+          "Latin", "Cyrillic", "Greek", "Armenian", "Georgian", "Hebrew",
+          "Arabic", "Syriac", "Thaana", "Devanagari", "Bengali", "Gurmukhi",
+          "Gujarati", "Oriya", "Tamil", "Telugu", "Kannada", "Malayalam",
+          "Sinhala", "Thai", "Lao", "Tibetan", "Myanmar", "Khmer", "Mongolian",
+          "Ethiopic", "Cherokee", "Canadian_Aboriginal", "Ogham", "Runic",
+          "Han", "Hiragana", "Katakana", "Bopomofo", "Hangul", "Yi", "Coptic",
+          "Gothic", "Tifinagh", "Vai", "Nko",
+        ];
+        const SCRIPT_RE = SCRIPTS.map(function (s) {
+          return [s, new RegExp("\\p{Script=" + s + "}", "u")];
+        });
+        const COMMON_RE = /[\p{Script=Common}\p{Script=Inherited}]/u;
+        function scriptOf(ch) {
+          if (COMMON_RE.test(ch)) return "Common";
+          for (const pair of SCRIPT_RE) if (pair[1].test(ch)) return pair[0];
+          return "Other";
+        }
+        /* Script mixes that are normal in real languages (UTS #39) */
+        const ALLOWED_MIX = [
+          ["Han", "Hiragana", "Katakana"],
+          ["Han", "Bopomofo"],
+          ["Han", "Hangul"],
+        ];
+        const mixedSuspicious = function (sc) {
+          return (
+            sc.length > 1 &&
+            !ALLOWED_MIX.some(function (set) {
+              return sc.every(function (s) {
+                return set.indexOf(s) !== -1;
+              });
+            })
+          );
+        };
+
+        const cpHex = function (c) {
+          return "U+" + c.codePointAt(0).toString(16).toUpperCase().padStart(4, "0");
+        };
+
+        /* RFC 3492 punycode decoder */
+        function punyDecode(input) {
+          const base = 36, tMin = 1, tMax = 26, skew = 38, damp = 700;
+          let n = 128, i = 0, bias = 72;
+          const out = [];
+          let b = input.lastIndexOf("-");
+          if (b < 0) b = 0;
+          for (let j = 0; j < b; j++) out.push(input.charCodeAt(j));
+          const adapt = function (delta, num, first) {
+            delta = first ? Math.floor(delta / damp) : delta >> 1;
+            delta += Math.floor(delta / num);
+            let k = 0;
+            while (delta > ((base - tMin) * tMax) >> 1) {
+              delta = Math.floor(delta / (base - tMin));
+              k += base;
+            }
+            return k + Math.floor(((base - tMin + 1) * delta) / (delta + skew));
+          };
+          for (let idx = b > 0 ? b + 1 : 0; idx < input.length; ) {
+            const oldi = i;
+            for (let w = 1, k = base; ; k += base) {
+              if (idx >= input.length) throw new Error("bad punycode");
+              const c = input.charCodeAt(idx++);
+              const digit =
+                c - 48 < 10 ? c - 22 : c - 65 < 26 ? c - 65 : c - 97 < 26 ? c - 97 : base;
+              if (digit >= base) throw new Error("bad punycode");
+              i += digit * w;
+              const t = k <= bias ? tMin : k >= bias + tMax ? tMax : k - bias;
+              if (digit < t) break;
+              w *= base - t;
+            }
+            const len = out.length + 1;
+            bias = adapt(i - oldi, len, oldi === 0);
+            n += Math.floor(i / len);
+            i %= len;
+            out.splice(i++, 0, n);
+          }
+          return String.fromCodePoint.apply(null, out);
+        }
+
+        function lev(a, b) {
+          const d = Array.from({ length: a.length + 1 }, function (_, i) {
+            return [i];
+          });
+          for (let j = 1; j <= b.length; j++) d[0][j] = j;
+          for (let i = 1; i <= a.length; i++)
+            for (let j = 1; j <= b.length; j++)
+              d[i][j] = Math.min(
+                d[i - 1][j] + 1,
+                d[i][j - 1] + 1,
+                d[i - 1][j - 1] + (a[i - 1] === b[j - 1] ? 0 : 1),
+              );
+          return d[a.length][b.length];
+        }
+
+        function analyzeURL(raw) {
+          const input = raw.trim();
+          let score = 0;
+          const findings = [];
+
+          if (
+            /[\u00AD\u034F\u115F\u1160\u17B4\u17B5\u180B-\u180E\u200B-\u200F\u202A-\u202E\u2060-\u206F\u3164\uFE00-\uFE0F\uFEFF\uFFA0]/.test(
+              input,
+            )
+          ) {
+            score += 4;
+            findings.push({
+              t: "phone",
+              m: "Contains invisible / zero-width / bidi-control characters",
+            });
+          }
+
+          let u;
+          try {
+            u = new URL(
+              /^[a-z][a-z0-9+.\-]*:\/\//i.test(input) ? input : "http://" + input,
+            );
+          } catch (e) {
+            return { error: "Could not parse that as a URL." };
+          }
+
+          const asciiHost = u.hostname;
+          const labels = asciiHost.split(".").map(function (a) {
+            let uni = a;
+            const idn = a.startsWith("xn--");
+            if (idn) {
+              try {
+                uni = punyDecode(a.slice(4));
+              } catch (e) {
+                score += 2;
+                findings.push({ t: "phone", m: "Malformed punycode label: " + a });
+              }
+            }
+            uni = uni.normalize("NFKC").toLowerCase();
+            const chars = Array.from(uni);
+            const scripts = new Set();
+            const swaps = [];
+            chars.forEach(function (c, i) {
+              const s = scriptOf(c);
+              if (s !== "Common") scripts.add(s);
+              if (isSwap(c))
+                swaps.push({
+                  pos: i + 1,
+                  ch: c,
+                  latin: MAP.get(c),
+                  script: s,
+                  cp: cpHex(c),
+                });
+            });
+            const readable = chars
+              .map(function (c) {
+                return isSwap(c) ? MAP.get(c) : c;
+              })
+              .join("");
+            return {
+              ascii: a,
+              uni: uni,
+              idn: idn,
+              scripts: Array.from(scripts),
+              swaps: swaps,
+              readable: readable,
+              fold: fold(uni),
+            };
+          });
+
+          if (
+            labels.some(function (l) {
+              return l.idn;
+            })
+          )
+            findings.push({
+              t: "keyword",
+              m: "Uses internationalized domain (punycode xn-- label)",
+            });
+
+          let brandHit = null;
+          labels.forEach(function (l, idx) {
+            if (mixedSuspicious(l.scripts)) {
+              score += 3;
+              findings.push({
+                t: "phone",
+                m: 'Mixed scripts in "' + l.uni + '": ' + l.scripts.join(" + "),
+              });
+            }
+            if (l.swaps.length) {
+              score += 3;
+              findings.push({
+                t: "pattern",
+                m: l.swaps.length + ' look-alike character(s) in "' + l.uni + '"',
+              });
+              // Whole-script spoof: no Latin at all, yet it reads as plain ASCII text
+              if (
+                l.scripts.indexOf("Latin") === -1 &&
+                /^[a-z0-9\-]+$/i.test(l.readable)
+              ) {
+                score += 3;
+                findings.push({
+                  t: "phone",
+                  m:
+                    "Whole-script spoof: label is entirely " +
+                    l.scripts.join("/") +
+                    ' but reads as Latin "' +
+                    l.readable +
+                    '"',
+                });
+              }
+            }
+            const isMain = idx === Math.max(0, labels.length - 2);
+            for (const pair of BRAND_FOLD) {
+              const b = pair[0], bf = pair[1];
+              if (l.uni !== b && l.fold === bf) {
+                score += 5;
+                brandHit = b;
+                findings.push({
+                  t: "phone",
+                  m: '"' + l.uni + '" imitates the brand "' + b + '"',
+                });
+                break;
+              }
+              if (l.swaps.length && l.uni !== b && bf.length >= 5 && l.fold.indexOf(bf) !== -1) {
+                score += 4;
+                brandHit = b;
+                findings.push({
+                  t: "phone",
+                  m: '"' + l.uni + '" embeds a look-alike of the brand "' + b + '"',
+                });
+                break;
+              }
+              if (isMain && b.length >= 6 && l.swaps.length === 0 && l.uni !== b && lev(l.fold, bf) === 1) {
+                score += 2;
+                brandHit = b;
+                findings.push({
+                  t: "pattern",
+                  m: '"' + l.uni + '" is one character away from "' + b + '" (possible typosquat)',
+                });
+                break;
+              }
+            }
+          });
+
+          const key = score >= 5 ? "SCAM" : score >= 2 ? "SPAM" : "SAFE";
+          const label =
+            key === "SCAM" ? "DANGEROUS" : key === "SPAM" ? "SUSPICIOUS" : "SAFE";
+          return {
+            key: key,
+            label: label,
+            score: score,
+            findings: findings,
+            labels: labels,
+            asciiHost: asciiHost,
+            brandHit: brandHit,
+            unicodeHost: labels.map(function (l) { return l.uni; }).join("."),
+            readableHost: labels.map(function (l) { return l.readable; }).join("."),
+          };
+        }
+
+        function render(r) {
+          if (r.error)
+            return '<p class="ai-error-text">' + escapeHTML(r.error) + "</p>";
+          const cls = r.key.toLowerCase();
+          const shown = r.labels
+            .map(function (l) {
+              return Array.from(l.uni)
+                .map(function (c) {
+                  return isSwap(c)
+                    ? '<mark class="highlight-link">' + escapeHTML(c) + "</mark>"
+                    : escapeHTML(c);
+                })
+                .join("");
+            })
+            .join(".");
+          const swaps = [].concat.apply([], r.labels.map(function (l) { return l.swaps; }));
+          const table = swaps.length
+            ? '<div class="homo-table-wrap"><table class="homo-table"><tr><th>#</th><th>Shown</th><th>Codepoint</th><th>Script</th><th>Looks like</th></tr>' +
+              swaps
+                .map(function (s) {
+                  return (
+                    "<tr><td>" + s.pos + "</td><td>" + escapeHTML(s.ch) + "</td><td>" +
+                    s.cp + "</td><td>" + s.script + "</td><td>" + escapeHTML(s.latin) + "</td></tr>"
+                  );
+                })
+                .join("") +
+              "</table></div>"
+            : "";
+          const flags = r.findings.length
+            ? r.findings
+                .map(function (f) {
+                  return '<span class="flag-tag ' + f.t + '">' + escapeHTML(f.m) + "</span>";
+                })
+                .join("")
+            : '<span style="font-family:var(--font-mono);font-size:12px;color:var(--text-muted)">No homograph indicators found.</span>';
+          return (
+            '<div class="verdict-block ' + cls + '"><div class="verdict-icon ' + cls + '">' +
+            VERDICT_ICONS[r.key] + "</div>" +
+            '<div class="verdict-info"><div class="verdict-label">' + r.label +
+            '</div><div class="verdict-score">Homograph score: ' + r.score + "</div></div></div>" +
+            '<div class="homo-line"><small>WHAT YOU SEE (suspicious chars highlighted)</small>' + shown + "</div>" +
+            '<div class="homo-line"><small>ORIGINAL TEXT IT IMITATES</small>' + escapeHTML(r.readableHost) +
+            (r.brandHit ? " &nbsp;→ matches brand <b>" + escapeHTML(r.brandHit) + "</b>" : "") + "</div>" +
+            '<div class="homo-line"><small>REAL ADDRESS YOUR BROWSER CONNECTS TO (punycode)</small>' + escapeHTML(r.asciiHost) + "</div>" +
+            '<div class="result-section" style="margin-top:14px"><div class="result-section-title">DETECTED FLAGS</div><div class="flags-list">' + flags + "</div></div>" +
+            (table ? '<div class="result-section"><div class="result-section-title">CHARACTER COMPARISON</div>' + table + "</div>" : "")
+          );
+        }
+
+        /* exposed for testing / console use */
+        window.ThreatHexURL = { analyzeURL: analyzeURL, tableSize: MAP.size };
+
+        document.addEventListener("DOMContentLoaded", function () {
+          const input = document.getElementById("urlInput"),
+            btn = document.getElementById("urlCheckBtn"),
+            out = document.getElementById("urlResult"),
+            badge = document.getElementById("urlBadge");
+          document.getElementById("urlTableTag").textContent =
+            "Unicode Confusables · " + MAP.size.toLocaleString() + " mappings";
+
+          function run() {
+            if (!input.value.trim()) {
+              input.style.borderColor = "var(--scam)";
+              setTimeout(function () {
+                input.style.borderColor = "";
+              }, 1500);
+              return;
+            }
+            const r = analyzeURL(input.value);
+            out.style.display = "";
+            out.innerHTML = render(r);
+            if (r.error) {
+              badge.textContent = "ERROR";
+              return;
+            }
+            const c = r.key.toLowerCase();
+            badge.textContent = r.label;
+            badge.style.color = "var(--" + c + ")";
+            badge.style.borderColor = "var(--" + c + "-border)";
+            badge.style.background = "var(--" + c + "-bg)";
+          }
+          btn.addEventListener("click", run);
+          input.addEventListener("keydown", function (e) {
+            if (e.key === "Enter") run();
+          });
+          document.getElementById("resetBtn").addEventListener("click", function () {
+            input.value = "";
+            out.style.display = "none";
+            out.innerHTML = "";
+            badge.textContent = "IDLE";
+            badge.style.cssText = "";
+          });
+        });
+      })();
     </script>
   </body>
 </html>
